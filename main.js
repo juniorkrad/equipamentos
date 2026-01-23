@@ -4,8 +4,8 @@ const equipamentos = [
         id: "dlink_dir610",
         fabricante: "D-Link",
         modelo: "DIR610",
-        // O caminho da imagem aceita GIF nativamente
-        imagem: "imagens/dlink_dir610.gif", 
+        // ATUALIZADO: Caminho direto na raiz
+        imagem: "dlink_dir610.gif", 
         specs: {
             "🌐 LAN": "4️⃣🚪 - FAST (10/100)",
             "🛜 Wi-Fi 2.4GHz": "✅ (Baixa Vel. / Alto Alcance)",
@@ -18,12 +18,12 @@ const equipamentos = [
         },
         obs: "Equipamento recomendado para utilização do serviço **Wi-Fi Plus**."
     },
-    // Você pode manter os exemplos anteriores aqui ou apagá-los
     {
         id: "huawei_eg8145v5",
         fabricante: "Huawei",
         modelo: "EG8145V5",
-        imagem: "imagens/ont-huawei.png",
+        // ATUALIZADO: Caminho direto na raiz (se você tiver essa imagem na raiz)
+        imagem: "ont-huawei.png",
         specs: {
             "🌐 LAN": "4️⃣🚪 - GIGA (10/100/1000)",
             "🛜 Wi-Fi 2.4GHz": "✅",
@@ -67,7 +67,6 @@ document.addEventListener('layoutCarregado', () => {
         }
 
         // Criar o Card HTML
-        // Note o "onerror" na imagem: se o GIF não carregar, mostra um aviso
         const html = `
             <div class="equipment-card">
                 <div class="card-image-area">

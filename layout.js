@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const header = document.createElement('header');
     header.innerHTML = `
         <div class="brand">
-            <img src="imagens/banner.png" alt="Logo Projeto" class="logo-banner" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<h3>Catálogo NOC</h3>')">
+            <img src="banner.png" alt="Logo Projeto" class="logo-banner" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<h3>Catálogo NOC</h3>')">
         </div>
 
         <select id="equipamento-select" class="md-select">
