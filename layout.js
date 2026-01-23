@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="banner.png" alt="Logo Projeto" class="logo-banner" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<h3>Catálogo NOC</h3>')">
         </div>
 
+        <div class="header-title">
+            Catálogo de Equipamentos
+        </div>
+
         <select id="equipamento-select" class="md-select">
             <option value="" disabled selected>Selecione um equipamento...</option>
         </select>
