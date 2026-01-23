@@ -1,0 +1,201 @@
+:root {
+    /* Paleta MD3 Baseada no Roxo */
+    --md-sys-color-primary: #6750a4;
+    --md-sys-color-primary-container: #22003a; /* Roxo Escuro (Base) */
+    --md-sys-color-on-surface: #1d1b20;
+    --md-sys-color-surface-container: #f3edf7; /* Cor do Card */
+    --md-sys-color-outline-variant: #cac4d0;
+    
+    /* Fontes */
+    --font-family-base: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family-base);
+    color: var(--md-sys-color-on-surface);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    /* O Degradê solicitado: Roxo embaixo, Branco em cima */
+    background: linear-gradient(to top, var(--md-sys-color-primary-container) 0%, #ffffff 50%, #ffffff 100%);
+    background-attachment: fixed; /* O fundo não rola com a página */
+}
+
+/* --- HEADER --- */
+header {
+    background-color: rgba(255, 255, 255, 0.9); /* Quase branco para fundir com o topo */
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-banner {
+    height: 40px; /* Ajuste conforme seu banner */
+    object-fit: contain;
+}
+
+/* Select Estilizado (Material Design) */
+.md-select {
+    padding: 10px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    background-color: white;
+    font-family: var(--font-family-base);
+    font-size: 1rem;
+    color: #49454f;
+    min-width: 280px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.md-select:focus {
+    outline: 2px solid var(--md-sys-color-primary);
+    border-color: transparent;
+}
+
+/* --- MAIN CONTENT --- */
+#conteudo-principal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Placeholder (Tela inicial vazia) */
+.placeholder-inicial {
+    text-align: center;
+    color: #666;
+    background: rgba(255,255,255,0.8);
+    padding: 2rem;
+    border-radius: 16px;
+}
+
+/* --- O CARD DO EQUIPAMENTO (Layout Dividido) --- */
+.equipment-card {
+    background-color: white;
+    border-radius: 28px; /* Borda arredondada MD3 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 50% para cada lado */
+    width: 100%;
+    overflow: hidden;
+    animation: slideUpFade 0.5s ease-out;
+}
+
+/* Lado Esquerdo: Imagem */
+.card-image-area {
+    background-color: #f5f5f5; /* Cinza bem claro para destacar o equipamento */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-right: 1px solid #eee;
+}
+
+.card-image-area img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2)); /* Sombra na própria imagem PNG */
+    transition: transform 0.3s ease;
+}
+
+.card-image-area img:hover {
+    transform: scale(1.03);
+}
+
+/* Lado Direito: Informações */
+.card-details-area {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-details-area h1 {
+    margin: 0;
+    color: var(--md-sys-color-primary);
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.card-details-area h2 {
+    margin: 0 0 1.5rem 0;
+    font-size: 1rem;
+    color: #777;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Tabela de Especificações */
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.specs-table td {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+.specs-table td:first-child {
+    font-weight: 500;
+    color: #49454f;
+    width: 35%;
+}
+
+.specs-table td:last-child {
+    color: #1d1b20;
+}
+
+/* Observações */
+.obs-box {
+    margin-top: auto;
+    background-color: #fff8f8; /* Tom avermelhado muito sutil */
+    border-left: 4px solid #b3261e; /* Vermelho erro/atenção MD3 */
+    padding: 1rem;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.9rem;
+    color: #410e0b;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: rgba(255, 255, 255, 0.7); /* Texto claro pois o fundo da página embaixo é roxo */
+    font-size: 0.85rem;
+}
+
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .equipment-card {
+        grid-template-columns: 1fr; /* Vira uma coluna só */
+    }
+    .card-image-area {
+        height: 250px;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+}
