@@ -6,7 +6,7 @@
     --md-sys-color-surface-container: #f3edf7; /* Cor do Card Padrão */
     --md-sys-color-outline-variant: #cac4d0;
     
-    /* ATUALIZADO: Tom de roxo mais perceptível para o fundo dos detalhes */
+    /* Tom de roxo mais perceptível para o fundo dos detalhes */
     --bg-details-area: #f3edf7; 
 
     /* Fontes */
@@ -36,7 +36,7 @@ header {
     border-bottom: none;
     box-shadow: none;
     
-    /* ATUALIZADO: Cabeçalho agora rola com a página (não é mais fixo) */
+    /* Cabeçalho rola com a página */
     position: relative; 
     z-index: 10;
 }
@@ -104,7 +104,7 @@ header {
 
 /* Lado Esquerdo: Imagem */
 .card-image-area {
-    background-color: #ffffff; /* Mantido branco para o GIF */
+    background-color: #fefefe; /* ATUALIZADO: Cor exata do fundo do GIF */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,7 +127,7 @@ header {
 
 /* Lado Direito: Informações */
 .card-details-area {
-    background-color: var(--bg-details-area); /* Agora usa o roxo #f3edf7 */
+    background-color: var(--bg-details-area); /* Roxo #f3edf7 */
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
