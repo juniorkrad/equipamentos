@@ -104,12 +104,12 @@ header {
 
 /* Lado Esquerdo: Imagem */
 .card-image-area {
-    background-color: #fefefe; /* ATUALIZADO: Cor exata do fundo do GIF */
+    background-color: var(--bg-details-area); /* ATUALIZADO: Agora usa o mesmo Roxo claro do outro lado */
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    border-right: 1px solid #f0f0f0;
+    /* border-right: 1px solid #f0f0f0;  <-- REMOVIDO: Não precisa de borda se a cor é igual */
 }
 
 .card-image-area img {
@@ -119,6 +119,8 @@ header {
     filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
     transition: transform 0.3s ease;
     border-radius: 20px;
+    /* Adicionei um background branco na própria imagem para caso o GIF seja transparente */
+    background-color: white; 
 }
 
 .card-image-area img:hover {
@@ -205,6 +207,6 @@ footer {
     .card-image-area {
         height: 250px;
         border-right: none;
-        border-bottom: 1px solid #eee;
+        /* border-bottom: 1px solid #eee; <-- REMOVIDO também para manter a cor unida no mobile */
     }
 }
