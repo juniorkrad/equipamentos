@@ -1,6 +1,4 @@
 // --- BANCO DE DADOS DOS EQUIPAMENTOS ---
-// NOTA: Removi os emojis das chaves para deixar o código mais profissional.
-// Os ícones serão inseridos dinamicamente pela função lá embaixo.
 const equipamentos = [
     {
         id: "dlink_dir610",
@@ -34,6 +32,25 @@ const equipamentos = [
             "PON (Fibra)": "✅ Sim (GPON)"
         },
         obs: "Equipamento padrão para planos acima de 500Mb."
+    },
+    {
+        id: "tplink_wr840",
+        fabricante: "TP-Link",
+        logo: "imagens/logos/tp-link.png",
+        modelo: "WR840",
+        imagem: "imagens/equipamentos/tplink_wr840.gif", 
+        specs: {
+            "LAN": "4 Portas - FAST (10/100)",
+            "Wi-Fi 2.4GHz": "✅ (Baixa Vel. / Alto Alcance)",
+            "Wi-Fi 5GHz": "❌ (Alta Vel. / Baixo Alcance)",
+            "Telefonia": "❌ Não possui",
+            "PON (Fibra)": "❌ Não (Requer ONU)",
+            "Wi-Fi Plus": "✅ (Recomendado)",
+            "Precisa ONU": "✅ Sim",
+            "Alta Velocidade": "❌"
+        },
+        // Sem observação específica no pedido, deixei vazio
+        obs: ""
     }
 ];
 
@@ -46,13 +63,13 @@ document.addEventListener('layoutCarregado', () => {
     // 1. Mapa de Ícones (Chave -> Material Symbol)
     function getIconePorChave(chave) {
         const mapa = {
-            "LAN": "lan",
+            "LAN": "door_front", // ATUALIZADO: Agora usa ícone de porta
             "Wi-Fi 2.4GHz": "wifi",
-            "Wi-Fi 5GHz": "wifi", // ATUALIZADO: Agora usa o mesmo ícone do 2.4GHz
+            "Wi-Fi 5GHz": "wifi", 
             "Telefonia": "call",
-            "PON (Fibra)": "cable", // Representando fibra/cabo
-            "Wi-Fi Plus": "wifi_tethering", // Representando expansão de sinal
-            "Precisa ONU": "hub", // Representando equipamento extra
+            "PON (Fibra)": "cable", 
+            "Wi-Fi Plus": "wifi_tethering", 
+            "Precisa ONU": "hub", 
             "Alta Velocidade": "rocket_launch"
         };
         // Retorna o ícone mapeado ou 'info' se não achar
@@ -67,8 +84,7 @@ document.addEventListener('layoutCarregado', () => {
         if (texto.includes("❌")) {
             return texto.replace("❌", `<span class="material-symbols-outlined" style="color: #c62828; vertical-align: middle; margin-right: 5px;">cancel</span>`);
         }
-        // Se tiver o emoji de porta (4️⃣🚪), removemos e deixamos só texto limpo se quiser, 
-        // mas aqui vou apenas retornar o texto processado.
+        // Tratamento para emojis antigos se ainda existirem
         return texto.replace("4️⃣🚪", "4 Portas"); 
     }
 
