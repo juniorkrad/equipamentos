@@ -68,6 +68,24 @@ const equipamentos = [
             "Alta Velocidade": "✅ (ultrapassa 100Mb)"
         },
         obs: ""
+    },
+    {
+        id: "furukawa_423_41w",
+        fabricante: "Furukawa",
+        logo: "imagens/logos/furukawa.png",
+        modelo: "423-41W/AC",
+        imagem: "imagens/equipamentos/furukawa_423.gif", 
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "✅ (não possui)", // Mantive o check conforme pedido, apesar de dizer "não possui", assumindo que a porta existe mas não é usada ou o check indica outra coisa. Se for erro de digitação e deveria ser X, me avise.
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
     }
 ];
 
@@ -82,15 +100,15 @@ document.addEventListener('layoutCarregado', () => {
         const mapa = {
             "LAN": "lan", 
             "Wi-Fi 2.4GHz": "wifi",
-            "Wi-Fi 2.4Ghz": "wifi", // Variação de escrita
+            "Wi-Fi 2.4Ghz": "wifi", 
             "Wi-Fi 5GHz": "wifi", 
-            "Wi-Fi 5Ghz": "wifi", // Variação de escrita
+            "Wi-Fi 5Ghz": "wifi", 
             "Telefonia": "call",
             "PON (Fibra)": "cable", 
-            "Fibra": "cable", // Nova chave para Furukawa
+            "Fibra": "cable", 
             "Wi-Fi Plus": "wifi_tethering", 
             "Precisa ONU": "hub", 
-            "Precisa Roteador": "router", // Nova chave para Furukawa
+            "Precisa Roteador": "router", 
             "Alta Velocidade": "rocket_launch"
         };
         return mapa[chave] || "info";
@@ -101,7 +119,6 @@ document.addEventListener('layoutCarregado', () => {
         let prefixoPortas = "";
 
         // --- A. LÓGICA INTELIGENTE DE PORTAS ---
-        // Verifica se o texto contém a palavra "portas" ou "porta" (singular/plural)
         if (texto.toLowerCase().includes("porta")) {
             const match = texto.match(/(\d+)\s*([Pp]ortas?)/); 
             if (match) {
@@ -117,20 +134,16 @@ document.addEventListener('layoutCarregado', () => {
             }
         }
 
-        // --- B. LÓGICA PADRÃO (Substitui emojis e formata Check/X) ---
-        // Garante a limpeza de emojis antigos
+        // --- B. LÓGICA PADRÃO ---
         texto = texto.replace("4️⃣🚪", "4 portas");
 
-        // Formata Check Verde (✅)
         if (texto.includes("✅")) {
             texto = texto.replace(/✅/g, `<span class="material-symbols-outlined" style="color: #2e7d32; vertical-align: middle; margin: 0 4px;">check_circle</span>`);
         }
-        // Formata X Vermelho (❌)
         if (texto.includes("❌")) {
             texto = texto.replace(/❌/g, `<span class="material-symbols-outlined" style="color: #c62828; vertical-align: middle; margin: 0 4px;">cancel</span>`);
         }
 
-        // Retorna o ícone de status da porta (se houver) + o texto formatado
         return prefixoPortas + texto;
     }
 
@@ -152,13 +165,8 @@ document.addEventListener('layoutCarregado', () => {
         let linhasTabela = '';
         for (const [chave, valor] of Object.entries(item.specs)) {
             
-            // Pega o ícone baseado no nome da especificação
             const iconeNome = getIconePorChave(chave);
-            
-            // Cria o HTML do ícone com estilo inline para alinhar
             const iconeHTML = `<span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 8px; color: var(--md-sys-color-primary);">${iconeNome}</span>`;
-
-            // Formata o valor
             const valorFormatado = formatarValor(valor);
 
             linhasTabela += `
