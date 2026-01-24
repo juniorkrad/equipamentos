@@ -62,7 +62,7 @@ document.addEventListener('layoutCarregado', () => {
     // 1. Mapa de Ícones (Chave -> Material Symbol)
     function getIconePorChave(chave) {
         const mapa = {
-            "LAN": "lan", // ATUALIZADO: Volta a ser o ícone de rede
+            "LAN": "lan", 
             "Wi-Fi 2.4GHz": "wifi",
             "Wi-Fi 5GHz": "wifi", 
             "Telefonia": "call",
@@ -76,6 +76,9 @@ document.addEventListener('layoutCarregado', () => {
 
     // 2. Função para formatar os valores (Troca ✅, ❌ e inclui ícone de porta)
     function formatarValor(texto) {
+        // Garante a limpeza de emojis antigos antes de processar
+        texto = texto.replace("4️⃣🚪", "4 Portas");
+
         // Formata Check Verde
         if (texto.includes("✅")) {
             texto = texto.replace("✅", `<span class="material-symbols-outlined" style="color: #2e7d32; vertical-align: middle; margin-right: 5px;">check_circle</span>`);
@@ -85,14 +88,13 @@ document.addEventListener('layoutCarregado', () => {
             texto = texto.replace("❌", `<span class="material-symbols-outlined" style="color: #c62828; vertical-align: middle; margin-right: 5px;">cancel</span>`);
         }
         
-        // NOVO: Adiciona o ícone 'door_front' onde tiver a palavra "Portas"
+        // NOVO: Adiciona o ícone 'door_front' NO INÍCIO da string para alinhar com os ícones acima
         if (texto.includes("Portas")) {
-            const iconePorta = `<span class="material-symbols-outlined" style="vertical-align: middle; font-size: 18px; margin-right: 2px;">door_front</span>`;
-            texto = texto.replace("Portas", iconePorta + "Portas");
+            const iconePorta = `<span class="material-symbols-outlined" style="vertical-align: middle; font-size: 18px; margin-right: 5px;">door_front</span>`;
+            texto = iconePorta + texto;
         }
 
-        // Limpa emoji antigo se houver
-        return texto.replace("4️⃣🚪", "4 Portas"); 
+        return texto;
     }
 
     // 3. Popular o Menu Suspenso
