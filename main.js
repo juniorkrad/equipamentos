@@ -7,14 +7,14 @@ const equipamentos = [
         modelo: "DIR610",
         imagem: "imagens/equipamentos/dlink_dir610.gif", 
         specs: {
-            "LAN": "4 Portas - FAST (10/100)",
-            "Wi-Fi 2.4GHz": "✅ (Baixa Vel. / Alto Alcance)",
-            "Wi-Fi 5GHz": "❌ (Alta Vel. / Baixo Alcance)",
-            "Telefonia": "❌ Não possui porta RJ11",
-            "PON (Fibra)": "❌ Não (Requer ONU)",
-            "Wi-Fi Plus": "✅ (Recomendado)",
-            "Precisa ONU": "✅ Sim",
-            "Alta Velocidade": "❌ (Limitado a 100Mb)"
+            "LAN": "(4 portas) (fast - 10/100)",
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "❌ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "PON (Fibra)": "❌ (porta PON)",
+            "Wi-Fi Plus": "✅ (recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "❌ (limitado a 100Mb)"
         },
         obs: "Equipamento recomendado para utilização do serviço **Wi-Fi Plus**."
     },
@@ -40,14 +40,14 @@ const equipamentos = [
         modelo: "WR840",
         imagem: "imagens/equipamentos/tplink_wr840.gif", 
         specs: {
-            "LAN": "4 Portas - FAST (10/100)",
-            "Wi-Fi 2.4GHz": "✅ (Baixa Vel. / Alto Alcance)",
-            "Wi-Fi 5GHz": "❌ (Alta Vel. / Baixo Alcance)",
-            "Telefonia": "❌ Não possui",
-            "PON (Fibra)": "❌ Não (Requer ONU)",
-            "Wi-Fi Plus": "✅ (Recomendado)",
-            "Precisa ONU": "✅ Sim",
-            "Alta Velocidade": "❌"
+            "LAN": "(4 portas) (fast - 10/100)",
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "❌ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "PON (Fibra)": "❌ (porta PON)",
+            "Wi-Fi Plus": "✅ (recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "❌ (limitado a 100Mb)"
         },
         obs: ""
     }
@@ -74,27 +74,43 @@ document.addEventListener('layoutCarregado', () => {
         return mapa[chave] || "info";
     }
 
-    // 2. Função para formatar os valores (Troca ✅, ❌ e inclui ícone de porta)
+    // 2. Função para formatar os valores (Lógica Inteligente de Portas + Formatação Geral)
     function formatarValor(texto) {
-        // Garante a limpeza de emojis antigos antes de processar
-        texto = texto.replace("4️⃣🚪", "4 Portas");
+        let prefixoPortas = "";
 
-        // Formata Check Verde
+        // --- A. LÓGICA INTELIGENTE DE PORTAS ---
+        // Verifica se o texto contém a palavra "portas" e extrai o número
+        if (texto.toLowerCase().includes("portas")) {
+            const match = texto.match(/(\d+)\s*([Pp]ortas)/); 
+            if (match) {
+                const qtd = parseInt(match[1], 10);
+                
+                // NOTA: Usei margin: 0 4px para ficar IDÊNTICO ao alinhamento do ✅ e ❌ abaixo
+                if (qtd >= 4) {
+                    // 4 ou mais: Ícone Check Verde
+                    prefixoPortas = `<span class="material-symbols-outlined" style="vertical-align: middle; margin: 0 4px; color: #2e7d32;">check_circle</span>`;
+                } else {
+                    // Menos de 4: Ícone Error Amarelo (Atenção)
+                    prefixoPortas = `<span class="material-symbols-outlined" style="vertical-align: middle; margin: 0 4px; color: #fbc02d;">error</span>`;
+                }
+            }
+        }
+
+        // --- B. LÓGICA PADRÃO (Substitui emojis e formata Check/X) ---
+        // Garante a limpeza de emojis antigos
+        texto = texto.replace("4️⃣🚪", "4 portas");
+
+        // Formata Check Verde (✅)
         if (texto.includes("✅")) {
-            texto = texto.replace("✅", `<span class="material-symbols-outlined" style="color: #2e7d32; vertical-align: middle; margin-right: 5px;">check_circle</span>`);
+            texto = texto.replace(/✅/g, `<span class="material-symbols-outlined" style="color: #2e7d32; vertical-align: middle; margin: 0 4px;">check_circle</span>`);
         }
-        // Formata X Vermelho
+        // Formata X Vermelho (❌)
         if (texto.includes("❌")) {
-            texto = texto.replace("❌", `<span class="material-symbols-outlined" style="color: #c62828; vertical-align: middle; margin-right: 5px;">cancel</span>`);
-        }
-        
-        // NOVO: Adiciona o ícone 'door_front' NO INÍCIO da string para alinhar com os ícones acima
-        if (texto.includes("Portas")) {
-            const iconePorta = `<span class="material-symbols-outlined" style="vertical-align: middle; font-size: 18px; margin-right: 5px;">door_front</span>`;
-            texto = iconePorta + texto;
+            texto = texto.replace(/❌/g, `<span class="material-symbols-outlined" style="color: #c62828; vertical-align: middle; margin: 0 4px;">cancel</span>`);
         }
 
-        return texto;
+        // Retorna o ícone de status da porta (se houver) + o texto formatado
+        return prefixoPortas + texto;
     }
 
     // 3. Popular o Menu Suspenso
