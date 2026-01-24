@@ -151,29 +151,50 @@ header {
 /* Lado Direito: Informações */
 .card-details-area {
     background-color: var(--bg-details-area); /* Roxo #f3edf7 */
-    
-    /* ATUALIZADO: Topo reduzido para 1rem (metade), laterais e fundo mantidos em 2rem */
     padding: 1rem 2rem 2rem 2rem; 
-    
     display: flex;
     flex-direction: column;
-    /* Garante que o conteúdo alinhe no topo esquerdo */
     justify-content: flex-start; 
     align-items: flex-start;
 }
 
-/* NOVO: Estilo da Logo do Fabricante (AGORA NO TOPO E MAIOR) */
+/* --- NOVO: HEADER DO CARD (Flexbox para Logo e Badge) --- */
+.card-header {
+    display: flex;
+    justify-content: space-between; /* Logo na esquerda, Badge na direita */
+    align-items: flex-start; /* Alinhados no topo */
+    width: 100%;
+    margin-bottom: 1rem; /* Espaço abaixo do cabeçalho */
+}
+
+/* Estilo da Logo do Fabricante */
 .brand-logo {
     height: 80px; 
     width: auto;
     max-width: 250px; 
     object-fit: contain;
     object-position: left; 
-    margin: 0 0 1rem 0; 
+    margin: 0; /* A margem agora é controlada pelo .card-header */
     display: block;
 }
 
-/* Título do Modelo (Agora vem DEPOIS da logo) */
+/* --- ETIQUETA DE CATEGORIA --- */
+.category-badge {
+    font-family: var(--font-family-mono); /* Fonte CODE */
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--md-sys-color-primary);
+    background-color: #e8def8; /* Roxo bem claro */
+    padding: 6px 14px;
+    border-radius: 8px; 
+    text-transform: uppercase;
+    letter-spacing: 1.5px; 
+    margin: 0; /* Sem margem para alinhar com o flexbox */
+    border: 1px solid rgba(103, 80, 164, 0.2); 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Título do Modelo (Agora vem DEPOIS do header) */
 .card-details-area h1 {
     margin: 0 0 1.5rem 0; 
     color: var(--md-sys-color-primary);
@@ -200,7 +221,6 @@ header {
 }
 
 .specs-table td {
-    /* ATUALIZADO: Padding reduzido de 12px para 8px para diminuir altura */
     padding: 8px 0;
     border-bottom: 1px solid rgba(0,0,0,0.05);
     font-size: 0.95rem;
@@ -210,17 +230,16 @@ header {
 .specs-table td:first-child {
     font-weight: 500;
     color: #49454f;
-    /* ATUALIZADO: Removido width fixo e adicionado nowrap para não quebrar linha */
     white-space: nowrap; 
-    padding-right: 20px; /* Espaço entre o título e o valor */
-    width: 1%; /* Truque para a coluna ocupar apenas o espaço necessário */
+    padding-right: 20px; 
+    width: 1%; 
 }
 
 .specs-table td:last-child {
     color: #1d1b20;
 }
 
-/* --- OBSERVAÇÕES (ATUALIZADO) --- */
+/* --- OBSERVAÇÕES --- */
 .obs-box {
     margin-top: auto;
     background-color: rgba(255, 255, 255, 0.8); 

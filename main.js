@@ -2,6 +2,7 @@
 const equipamentos = [
     {
         id: "dlink_dir610",
+        categoria: "ROTEADOR", 
         fabricante: "D-Link",
         logo: "imagens/logos/d-link.png",
         modelo: "DIR610",
@@ -19,22 +20,8 @@ const equipamentos = [
         obs: "Equipamento recomendado para utilização do serviço **Wi-Fi Plus**."
     },
     {
-        id: "huawei_eg8145v5",
-        fabricante: "Huawei",
-        modelo: "EG8145V5",
-        // Sem logo definida
-        imagem: "imagens/equipamentos/ont-huawei.png",
-        specs: {
-            "LAN": "4 Portas - GIGA (10/100/1000)",
-            "Wi-Fi 2.4GHz": "✅",
-            "Wi-Fi 5GHz": "✅",
-            "Telefonia": "✅ 1 Porta",
-            "PON (Fibra)": "✅ Sim (GPON)"
-        },
-        obs: "Equipamento padrão para planos acima de 500Mb."
-    },
-    {
         id: "tplink_wr840",
+        categoria: "ROTEADOR", 
         fabricante: "TP-Link",
         logo: "imagens/logos/tp-link.png",
         modelo: "WR840",
@@ -53,6 +40,7 @@ const equipamentos = [
     },
     {
         id: "furukawa_420_10r",
+        categoria: "ONU", 
         fabricante: "Furukawa",
         logo: "imagens/logos/furukawa.png",
         modelo: "420-10R",
@@ -71,6 +59,7 @@ const equipamentos = [
     },
     {
         id: "furukawa_423_41w",
+        categoria: "ONT", 
         fabricante: "Furukawa",
         logo: "imagens/logos/furukawa.png",
         modelo: "423-41W/AC",
@@ -79,7 +68,7 @@ const equipamentos = [
             "LAN": "(4 portas) (giga - 100/1000)",
             "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
             "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (não possui)", // Mantive o check conforme pedido, apesar de dizer "não possui", assumindo que a porta existe mas não é usada ou o check indica outra coisa. Se for erro de digitação e deveria ser X, me avise.
+            "Telefonia": "✅ (não possui)",
             "Fibra": "✅ (porta PON)",
             "Wi-Fi Plus": "❌ (não recomendado)",
             "Precisa Roteador": "❌ (não)",
@@ -125,10 +114,8 @@ document.addEventListener('layoutCarregado', () => {
                 const qtd = parseInt(match[1], 10);
                 
                 if (qtd >= 4) {
-                    // 4 ou mais: Ícone Check Verde
                     prefixoPortas = `<span class="material-symbols-outlined" style="vertical-align: middle; margin: 0 4px; color: #2e7d32;">check_circle</span>`;
                 } else {
-                    // Menos de 4: Ícone Error Amarelo (Atenção)
                     prefixoPortas = `<span class="material-symbols-outlined" style="vertical-align: middle; margin: 0 4px; color: #fbc02d;">error</span>`;
                 }
             }
@@ -164,7 +151,6 @@ document.addEventListener('layoutCarregado', () => {
         // Gerar linhas da tabela
         let linhasTabela = '';
         for (const [chave, valor] of Object.entries(item.specs)) {
-            
             const iconeNome = getIconePorChave(chave);
             const iconeHTML = `<span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 8px; color: var(--md-sys-color-primary);">${iconeNome}</span>`;
             const valorFormatado = formatarValor(valor);
@@ -184,6 +170,11 @@ document.addEventListener('layoutCarregado', () => {
             ? `<img src="${item.logo}" alt="${item.fabricante}" class="brand-logo">`
             : `<h2>${item.fabricante}</h2>`;
 
+        // LÓGICA DO BADGE
+        const categoriaHTML = item.categoria 
+            ? `<div class="category-badge">${item.categoria}</div>` 
+            : '';
+
         const html = `
             <div class="equipment-card">
                 <div class="card-image-area">
@@ -192,7 +183,10 @@ document.addEventListener('layoutCarregado', () => {
 
                 <div class="card-details-area">
                     
-                    ${fabricanteHTML}
+                    <div class="card-header">
+                        ${fabricanteHTML}
+                        ${categoriaHTML}
+                    </div>
 
                     <h1>${item.modelo}</h1>
 
