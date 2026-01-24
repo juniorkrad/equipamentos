@@ -49,7 +49,6 @@ const equipamentos = [
             "Precisa ONU": "✅ Sim",
             "Alta Velocidade": "❌"
         },
-        // Sem observação específica no pedido, deixei vazio
         obs: ""
     }
 ];
@@ -63,7 +62,7 @@ document.addEventListener('layoutCarregado', () => {
     // 1. Mapa de Ícones (Chave -> Material Symbol)
     function getIconePorChave(chave) {
         const mapa = {
-            "LAN": "door_front", // ATUALIZADO: Agora usa ícone de porta
+            "LAN": "lan", // ATUALIZADO: Volta a ser o ícone de rede
             "Wi-Fi 2.4GHz": "wifi",
             "Wi-Fi 5GHz": "wifi", 
             "Telefonia": "call",
@@ -72,19 +71,27 @@ document.addEventListener('layoutCarregado', () => {
             "Precisa ONU": "hub", 
             "Alta Velocidade": "rocket_launch"
         };
-        // Retorna o ícone mapeado ou 'info' se não achar
         return mapa[chave] || "info";
     }
 
-    // 2. Função para formatar os valores (Troca ✅ e ❌ por ícones bonitos)
+    // 2. Função para formatar os valores (Troca ✅, ❌ e inclui ícone de porta)
     function formatarValor(texto) {
+        // Formata Check Verde
         if (texto.includes("✅")) {
-            return texto.replace("✅", `<span class="material-symbols-outlined" style="color: #2e7d32; vertical-align: middle; margin-right: 5px;">check_circle</span>`);
+            texto = texto.replace("✅", `<span class="material-symbols-outlined" style="color: #2e7d32; vertical-align: middle; margin-right: 5px;">check_circle</span>`);
         }
+        // Formata X Vermelho
         if (texto.includes("❌")) {
-            return texto.replace("❌", `<span class="material-symbols-outlined" style="color: #c62828; vertical-align: middle; margin-right: 5px;">cancel</span>`);
+            texto = texto.replace("❌", `<span class="material-symbols-outlined" style="color: #c62828; vertical-align: middle; margin-right: 5px;">cancel</span>`);
         }
-        // Tratamento para emojis antigos se ainda existirem
+        
+        // NOVO: Adiciona o ícone 'door_front' onde tiver a palavra "Portas"
+        if (texto.includes("Portas")) {
+            const iconePorta = `<span class="material-symbols-outlined" style="vertical-align: middle; font-size: 18px; margin-right: 2px;">door_front</span>`;
+            texto = texto.replace("Portas", iconePorta + "Portas");
+        }
+
+        // Limpa emoji antigo se houver
         return texto.replace("4️⃣🚪", "4 Portas"); 
     }
 
@@ -112,7 +119,7 @@ document.addEventListener('layoutCarregado', () => {
             // Cria o HTML do ícone com estilo inline para alinhar
             const iconeHTML = `<span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 8px; color: var(--md-sys-color-primary);">${iconeNome}</span>`;
 
-            // Formata o valor (check verde / x vermelho)
+            // Formata o valor
             const valorFormatado = formatarValor(valor);
 
             linhasTabela += `
