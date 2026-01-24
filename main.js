@@ -80,9 +80,10 @@ document.addEventListener('layoutCarregado', () => {
                 </div>
 
                 <div class="card-details-area">
-                    <h1>${item.modelo}</h1>
                     
                     ${fabricanteHTML}
+
+                    <h1>${item.modelo}</h1>
 
                     <table class="specs-table">
                         <tbody>

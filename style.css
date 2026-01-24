@@ -50,7 +50,7 @@ header {
 /* NOVO ESTILO DO TÍTULO (Atualizado para Maior) */
 .header-title {
     font-family: var(--font-family-mono);
-    font-size: 2.5rem; /* Aumentado de 1.5rem para 2.5rem */
+    font-size: 2.5rem; 
     font-weight: 700;
     color: var(--md-sys-color-primary);
     text-transform: uppercase;
@@ -153,24 +153,29 @@ header {
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
+    /* Garante que o conteúdo alinhe no topo esquerdo */
+    justify-content: flex-start; 
+    align-items: flex-start;
 }
 
-.card-details-area h1 {
-    margin: 0;
-    color: var(--md-sys-color-primary);
-    font-size: 1.75rem;
-    font-weight: 500;
-}
-
-/* NOVO: Estilo da Logo do Fabricante */
+/* NOVO: Estilo da Logo do Fabricante (AGORA NO TOPO E MAIOR) */
 .brand-logo {
-    height: 40px; /* Altura controlada */
+    height: 80px; /* DOBRADO: De 40px para 80px */
     width: auto;
-    max-width: 150px;
+    max-width: 250px; /* Aumentado para permitir logos mais largas */
     object-fit: contain;
-    margin: 8px 0 1.5rem 0; /* Espaçamento ajustado */
+    object-position: left; /* Garante alinhamento a esquerda */
+    margin: 0 0 1rem 0; /* Margem inferior para separar do Título */
     display: block;
-    opacity: 0.9; /* Leve transparência para integrar com o fundo se necessário */
+}
+
+/* Título do Modelo (Agora vem DEPOIS da logo) */
+.card-details-area h1 {
+    margin: 0 0 1.5rem 0; /* Adicionado margem inferior */
+    color: var(--md-sys-color-primary);
+    font-size: 2rem; /* Levemente maior para balancear com a logo */
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 /* Estilo do texto (Fallback caso não tenha logo) */
@@ -221,6 +226,8 @@ header {
     color: var(--md-sys-color-primary-container);
     font-weight: 500;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    width: 100%; /* Ocupa a largura total disponível */
+    box-sizing: border-box;
 }
 
 /* --- FOOTER --- */
