@@ -48,7 +48,7 @@ document.addEventListener('layoutCarregado', () => {
         const mapa = {
             "LAN": "lan",
             "Wi-Fi 2.4GHz": "wifi",
-            "Wi-Fi 5GHz": "wifi_find", // Ícone levemente diferente
+            "Wi-Fi 5GHz": "wifi", // ATUALIZADO: Agora usa o mesmo ícone do 2.4GHz
             "Telefonia": "call",
             "PON (Fibra)": "cable", // Representando fibra/cabo
             "Wi-Fi Plus": "wifi_tethering", // Representando expansão de sinal

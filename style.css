@@ -96,7 +96,8 @@ header {
     align-items: center;
     padding: 2rem;
     width: 100%;
-    max-width: 1200px;
+    /* ATUALIZADO: Aumentado para 1400px para dar mais largura ao card */
+    max-width: 1400px; 
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -150,7 +151,10 @@ header {
 /* Lado Direito: Informações */
 .card-details-area {
     background-color: var(--bg-details-area); /* Roxo #f3edf7 */
-    padding: 2.5rem;
+    
+    /* ATUALIZADO: Topo reduzido para 1rem (metade), laterais e fundo mantidos em 2rem */
+    padding: 1rem 2rem 2rem 2rem; 
+    
     display: flex;
     flex-direction: column;
     /* Garante que o conteúdo alinhe no topo esquerdo */
@@ -160,20 +164,20 @@ header {
 
 /* NOVO: Estilo da Logo do Fabricante (AGORA NO TOPO E MAIOR) */
 .brand-logo {
-    height: 80px; /* DOBRADO: De 40px para 80px */
+    height: 80px; 
     width: auto;
-    max-width: 250px; /* Aumentado para permitir logos mais largas */
+    max-width: 250px; 
     object-fit: contain;
-    object-position: left; /* Garante alinhamento a esquerda */
-    margin: 0 0 1rem 0; /* Margem inferior para separar do Título */
+    object-position: left; 
+    margin: 0 0 1rem 0; 
     display: block;
 }
 
 /* Título do Modelo (Agora vem DEPOIS da logo) */
 .card-details-area h1 {
-    margin: 0 0 1.5rem 0; /* Adicionado margem inferior */
+    margin: 0 0 1.5rem 0; 
     color: var(--md-sys-color-primary);
-    font-size: 2rem; /* Levemente maior para balancear com a logo */
+    font-size: 2rem; 
     font-weight: 700;
     line-height: 1.2;
 }
@@ -196,15 +200,20 @@ header {
 }
 
 .specs-table td {
-    padding: 12px 0;
+    /* ATUALIZADO: Padding reduzido de 12px para 8px para diminuir altura */
+    padding: 8px 0;
     border-bottom: 1px solid rgba(0,0,0,0.05);
     font-size: 0.95rem;
 }
 
+/* Coluna dos Títulos (Lado Esquerdo da Tabela) */
 .specs-table td:first-child {
     font-weight: 500;
     color: #49454f;
-    width: 35%;
+    /* ATUALIZADO: Removido width fixo e adicionado nowrap para não quebrar linha */
+    white-space: nowrap; 
+    padding-right: 20px; /* Espaço entre o título e o valor */
+    width: 1%; /* Truque para a coluna ocupar apenas o espaço necessário */
 }
 
 .specs-table td:last-child {
@@ -214,19 +223,15 @@ header {
 /* --- OBSERVAÇÕES (ATUALIZADO) --- */
 .obs-box {
     margin-top: auto;
-    /* Fundo branco semi-transparente para destacar sobre o roxo claro */
     background-color: rgba(255, 255, 255, 0.8); 
-    /* Borda lateral agora é Roxa (Primary) e mais grossa */
     border-left: 6px solid var(--md-sys-color-primary);
     padding: 1.2rem;
-    /* Cantos levemente arredondados */
     border-radius: 0 12px 12px 0;
     font-size: 0.95rem;
-    /* Texto em roxo escuro para leitura */
     color: var(--md-sys-color-primary-container);
     font-weight: 500;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    width: 100%; /* Ocupa a largura total disponível */
+    width: 100%; 
     box-sizing: border-box;
 }
 
