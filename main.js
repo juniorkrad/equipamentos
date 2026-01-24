@@ -1,21 +1,22 @@
 // --- BANCO DE DADOS DOS EQUIPAMENTOS ---
+// NOTA: Removi os emojis das chaves para deixar o código mais profissional.
+// Os ícones serão inseridos dinamicamente pela função lá embaixo.
 const equipamentos = [
     {
         id: "dlink_dir610",
         fabricante: "D-Link",
-        // NOVO: Caminho da logo
         logo: "imagens/logos/d-link.png",
         modelo: "DIR610",
         imagem: "imagens/equipamentos/dlink_dir610.gif", 
         specs: {
-            "🌐 LAN": "4️⃣🚪 - FAST (10/100)",
-            "🛜 Wi-Fi 2.4GHz": "✅ (Baixa Vel. / Alto Alcance)",
-            "🛜 Wi-Fi 5GHz": "❌ (Alta Vel. / Baixo Alcance)",
-            "📞 Telefonia": "❌ Não possui porta RJ11",
-            "📶 PON (Fibra)": "❌ Não (Requer ONU)",
-            "🛜 Wi-Fi Plus➕": "✅ (Recomendado)",
-            "⚡ Precisa ONU": "✅ Sim",
-            "🚀 Alta Velocidade": "❌ (Limitado a 100Mb)"
+            "LAN": "4 Portas - FAST (10/100)",
+            "Wi-Fi 2.4GHz": "✅ (Baixa Vel. / Alto Alcance)",
+            "Wi-Fi 5GHz": "❌ (Alta Vel. / Baixo Alcance)",
+            "Telefonia": "❌ Não possui porta RJ11",
+            "PON (Fibra)": "❌ Não (Requer ONU)",
+            "Wi-Fi Plus": "✅ (Recomendado)",
+            "Precisa ONU": "✅ Sim",
+            "Alta Velocidade": "❌ (Limitado a 100Mb)"
         },
         obs: "Equipamento recomendado para utilização do serviço **Wi-Fi Plus**."
     },
@@ -23,26 +24,55 @@ const equipamentos = [
         id: "huawei_eg8145v5",
         fabricante: "Huawei",
         modelo: "EG8145V5",
-        // Sem logo definida, ele usará o texto automaticamente
+        // Sem logo definida
         imagem: "imagens/equipamentos/ont-huawei.png",
         specs: {
-            "🌐 LAN": "4️⃣🚪 - GIGA (10/100/1000)",
-            "🛜 Wi-Fi 2.4GHz": "✅",
-            "🛜 Wi-Fi 5GHz": "✅",
-            "📞 Telefonia": "✅ 1 Porta",
-            "📶 PON (Fibra)": "✅ Sim (GPON)"
+            "LAN": "4 Portas - GIGA (10/100/1000)",
+            "Wi-Fi 2.4GHz": "✅",
+            "Wi-Fi 5GHz": "✅",
+            "Telefonia": "✅ 1 Porta",
+            "PON (Fibra)": "✅ Sim (GPON)"
         },
         obs: "Equipamento padrão para planos acima de 500Mb."
     }
 ];
 
 
-// --- LÓGICA DO SISTEMA (Não precisa mexer aqui) ---
+// --- LÓGICA DO SISTEMA ---
 document.addEventListener('layoutCarregado', () => {
     const select = document.getElementById('equipamento-select');
     const mainContainer = document.getElementById('conteudo-principal');
 
-    // 1. Popular o Menu Suspenso
+    // 1. Mapa de Ícones (Chave -> Material Symbol)
+    function getIconePorChave(chave) {
+        const mapa = {
+            "LAN": "lan",
+            "Wi-Fi 2.4GHz": "wifi",
+            "Wi-Fi 5GHz": "wifi_find", // Ícone levemente diferente
+            "Telefonia": "call",
+            "PON (Fibra)": "cable", // Representando fibra/cabo
+            "Wi-Fi Plus": "wifi_tethering", // Representando expansão de sinal
+            "Precisa ONU": "hub", // Representando equipamento extra
+            "Alta Velocidade": "rocket_launch"
+        };
+        // Retorna o ícone mapeado ou 'info' se não achar
+        return mapa[chave] || "info";
+    }
+
+    // 2. Função para formatar os valores (Troca ✅ e ❌ por ícones bonitos)
+    function formatarValor(texto) {
+        if (texto.includes("✅")) {
+            return texto.replace("✅", `<span class="material-symbols-outlined" style="color: #2e7d32; vertical-align: middle; margin-right: 5px;">check_circle</span>`);
+        }
+        if (texto.includes("❌")) {
+            return texto.replace("❌", `<span class="material-symbols-outlined" style="color: #c62828; vertical-align: middle; margin-right: 5px;">cancel</span>`);
+        }
+        // Se tiver o emoji de porta (4️⃣🚪), removemos e deixamos só texto limpo se quiser, 
+        // mas aqui vou apenas retornar o texto processado.
+        return texto.replace("4️⃣🚪", "4 Portas"); 
+    }
+
+    // 3. Popular o Menu Suspenso
     equipamentos.forEach(eq => {
         const option = document.createElement('option');
         option.value = eq.id;
@@ -50,7 +80,7 @@ document.addEventListener('layoutCarregado', () => {
         select.appendChild(option);
     });
 
-    // 2. Função para Criar o HTML do Equipamento
+    // 4. Função para Renderizar
     function renderizarEquipamento(id) {
         const item = equipamentos.find(e => e.id === id);
         
@@ -59,20 +89,31 @@ document.addEventListener('layoutCarregado', () => {
         // Gerar linhas da tabela
         let linhasTabela = '';
         for (const [chave, valor] of Object.entries(item.specs)) {
+            
+            // Pega o ícone baseado no nome da especificação
+            const iconeNome = getIconePorChave(chave);
+            
+            // Cria o HTML do ícone com estilo inline para alinhar
+            const iconeHTML = `<span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 8px; color: var(--md-sys-color-primary);">${iconeNome}</span>`;
+
+            // Formata o valor (check verde / x vermelho)
+            const valorFormatado = formatarValor(valor);
+
             linhasTabela += `
                 <tr>
-                    <td style="font-size: 1.1em;">${chave}</td>
-                    <td>${valor}</td>
+                    <td style="font-size: 1.1em; display: flex; align-items: center;">
+                        ${iconeHTML} ${chave}
+                    </td>
+                    <td>${valorFormatado}</td>
                 </tr>
             `;
         }
 
-        // LÓGICA DA LOGO: Verifica se existe imagem da logo cadastrada
+        // LÓGICA DA LOGO
         const fabricanteHTML = item.logo 
             ? `<img src="${item.logo}" alt="${item.fabricante}" class="brand-logo">`
             : `<h2>${item.fabricante}</h2>`;
 
-        // Criar o Card HTML
         const html = `
             <div class="equipment-card">
                 <div class="card-image-area">
@@ -96,7 +137,6 @@ document.addEventListener('layoutCarregado', () => {
             </div>
         `;
 
-        // Inserir na página com transição
         mainContainer.style.opacity = 0;
         
         setTimeout(() => {
@@ -106,7 +146,6 @@ document.addEventListener('layoutCarregado', () => {
         }, 150);
     }
 
-    // 3. Ouvir evento de troca no menu
     select.addEventListener('change', (e) => {
         renderizarEquipamento(e.target.value);
     });
