@@ -50,6 +50,24 @@ const equipamentos = [
             "Alta Velocidade": "❌ (limitado a 100Mb)"
         },
         obs: ""
+    },
+    {
+        id: "furukawa_420_10r",
+        fabricante: "Furukawa",
+        logo: "imagens/logos/furukawa.png",
+        modelo: "420-10R",
+        imagem: "imagens/equipamentos/furukawa_420.gif", 
+        specs: {
+            "LAN": "(1 porta) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "❌ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "❌ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "✅ (sim)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
     }
 ];
 
@@ -64,11 +82,15 @@ document.addEventListener('layoutCarregado', () => {
         const mapa = {
             "LAN": "lan", 
             "Wi-Fi 2.4GHz": "wifi",
+            "Wi-Fi 2.4Ghz": "wifi", // Variação de escrita
             "Wi-Fi 5GHz": "wifi", 
+            "Wi-Fi 5Ghz": "wifi", // Variação de escrita
             "Telefonia": "call",
             "PON (Fibra)": "cable", 
+            "Fibra": "cable", // Nova chave para Furukawa
             "Wi-Fi Plus": "wifi_tethering", 
             "Precisa ONU": "hub", 
+            "Precisa Roteador": "router", // Nova chave para Furukawa
             "Alta Velocidade": "rocket_launch"
         };
         return mapa[chave] || "info";
@@ -79,13 +101,12 @@ document.addEventListener('layoutCarregado', () => {
         let prefixoPortas = "";
 
         // --- A. LÓGICA INTELIGENTE DE PORTAS ---
-        // Verifica se o texto contém a palavra "portas" e extrai o número
-        if (texto.toLowerCase().includes("portas")) {
-            const match = texto.match(/(\d+)\s*([Pp]ortas)/); 
+        // Verifica se o texto contém a palavra "portas" ou "porta" (singular/plural)
+        if (texto.toLowerCase().includes("porta")) {
+            const match = texto.match(/(\d+)\s*([Pp]ortas?)/); 
             if (match) {
                 const qtd = parseInt(match[1], 10);
                 
-                // NOTA: Usei margin: 0 4px para ficar IDÊNTICO ao alinhamento do ✅ e ❌ abaixo
                 if (qtd >= 4) {
                     // 4 ou mais: Ícone Check Verde
                     prefixoPortas = `<span class="material-symbols-outlined" style="vertical-align: middle; margin: 0 4px; color: #2e7d32;">check_circle</span>`;
