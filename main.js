@@ -3,9 +3,10 @@ const equipamentos = [
     {
         id: "dlink_dir610",
         fabricante: "D-Link",
+        // NOVO: Caminho da logo
+        logo: "imagens/logos/d-link.png",
         modelo: "DIR610",
-        // ATUALIZADO: Caminho direto na raiz
-        imagem: "dlink_dir610.gif", 
+        imagem: "imagens/equipamentos/dlink_dir610.gif", 
         specs: {
             "🌐 LAN": "4️⃣🚪 - FAST (10/100)",
             "🛜 Wi-Fi 2.4GHz": "✅ (Baixa Vel. / Alto Alcance)",
@@ -22,8 +23,8 @@ const equipamentos = [
         id: "huawei_eg8145v5",
         fabricante: "Huawei",
         modelo: "EG8145V5",
-        // ATUALIZADO: Caminho direto na raiz (se você tiver essa imagem na raiz)
-        imagem: "ont-huawei.png",
+        // Sem logo definida, ele usará o texto automaticamente
+        imagem: "imagens/equipamentos/ont-huawei.png",
         specs: {
             "🌐 LAN": "4️⃣🚪 - GIGA (10/100/1000)",
             "🛜 Wi-Fi 2.4GHz": "✅",
@@ -66,6 +67,11 @@ document.addEventListener('layoutCarregado', () => {
             `;
         }
 
+        // LÓGICA DA LOGO: Verifica se existe imagem da logo cadastrada
+        const fabricanteHTML = item.logo 
+            ? `<img src="${item.logo}" alt="${item.fabricante}" class="brand-logo">`
+            : `<h2>${item.fabricante}</h2>`;
+
         // Criar o Card HTML
         const html = `
             <div class="equipment-card">
@@ -75,7 +81,8 @@ document.addEventListener('layoutCarregado', () => {
 
                 <div class="card-details-area">
                     <h1>${item.modelo}</h1>
-                    <h2>${item.fabricante}</h2>
+                    
+                    ${fabricanteHTML}
 
                     <table class="specs-table">
                         <tbody>

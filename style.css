@@ -47,17 +47,18 @@ header {
     object-fit: contain;
 }
 
-/* NOVO ESTILO DO TÍTULO */
+/* NOVO ESTILO DO TÍTULO (Atualizado para Maior) */
 .header-title {
     font-family: var(--font-family-mono);
-    font-size: 1.5rem;
+    font-size: 2.5rem; /* Aumentado de 1.5rem para 2.5rem */
     font-weight: 700;
     color: var(--md-sys-color-primary);
     text-transform: uppercase;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
     text-align: center;
     flex: 1; /* Ocupa o espaço central */
     margin: 0 20px;
+    line-height: 1.1;
 }
 
 /* Esconder o título em telas muito pequenas (celulares) */
@@ -161,6 +162,18 @@ header {
     font-weight: 500;
 }
 
+/* NOVO: Estilo da Logo do Fabricante */
+.brand-logo {
+    height: 40px; /* Altura controlada */
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+    margin: 8px 0 1.5rem 0; /* Espaçamento ajustado */
+    display: block;
+    opacity: 0.9; /* Leve transparência para integrar com o fundo se necessário */
+}
+
+/* Estilo do texto (Fallback caso não tenha logo) */
 .card-details-area h2 {
     margin: 0 0 1.5rem 0;
     font-size: 1rem;
