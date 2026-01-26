@@ -210,7 +210,6 @@ const equipamentos = [
         },
         obs: ""
     },
-    // --- NOVOS ROTEADORES MULTILASER ---
     {
         id: "multilaser_re708",
         categoria: "ROTEADOR", 
@@ -587,6 +586,102 @@ const equipamentos = [
         imagem: "imagens/equipamentos/maxfiber_1200gm-fxs.gif", 
         specs: {
             "LAN": "(2 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "✅ (possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    // --- NOVOS EQUIPAMENTOS (NNET) ---
+    {
+        id: "askey_8115_nnet",
+        categoria: "ONT", 
+        fabricante: "Askey",
+        logo: "imagens/logos/askey.png",
+        modelo: "8115 (NNET)",
+        imagem: "imagens/equipamentos/askey_8115-nnet.gif", 
+        specs: {
+            "LAN": "(4 portas) (fast - 10/100)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "✅ (possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "china_mobile_nnet",
+        categoria: "ONT", 
+        fabricante: "China Mobile",
+        logo: "imagens/logos/china-mobile.png",
+        modelo: "(NNET)",
+        imagem: "imagens/equipamentos/china-mobile_nnet.gif", 
+        specs: {
+            "LAN": "(4 portas) (fast - 10/100)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "✅ (possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "euronet_etn_g1300w",
+        categoria: "ONT", 
+        fabricante: "Euronet",
+        logo: "imagens/logos/euronet.png",
+        modelo: "ETN-G1300W (NNET)",
+        imagem: "imagens/equipamentos/euronet_etn-g1300w-nnet.gif", 
+        specs: {
+            "LAN": "(4 portas) (fast - 10/100)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "❌ (limitado a 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "euronet_etn_g1800w",
+        categoria: "ONT", 
+        fabricante: "Euronet",
+        logo: "imagens/logos/euronet.png",
+        modelo: "ETN-G1800W (NNET)",
+        imagem: "imagens/equipamentos/euronet_etn-g1800w-nnet.gif", 
+        specs: {
+            "LAN": "(4 portas) (fast - 10/100)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "✅ (possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "mitrastar_fibron",
+        categoria: "ONT", 
+        fabricante: "Mitrastar",
+        logo: "imagens/logos/mitrastar.png",
+        modelo: "FIBRON (NNET)",
+        imagem: "imagens/equipamentos/mitrastar_fibron_nnet.gif", 
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)",
             "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
             "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
             "Telefonia": "✅ (possui)",
