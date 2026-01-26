@@ -39,12 +39,11 @@ const equipamentos = [
         },
         obs: ""
     },
-    // --- NOVOS ROTEADORES CADASTRADOS ---
     {
         id: "tplink_archer_c5",
         categoria: "ROTEADOR",
         fabricante: "TP-Link",
-        logo: "imagens/logos/tplink.png",
+        logo: "imagens/logos/tp-link.png",
         modelo: "ARCHER C5",
         imagem: "imagens/equipamentos/tplink_archer-c5.gif",
         specs: {
@@ -120,7 +119,7 @@ const equipamentos = [
         id: "trendnet_tew731br",
         categoria: "ROTEADOR",
         fabricante: "Trendnet",
-        logo: "imagens/logos/tendnet.png",
+        logo: "imagens/logos/trendnet.png", 
         modelo: "TEW-731BR",
         imagem: "imagens/equipamentos/trendnet_tew-731br.gif",
         specs: {
@@ -132,6 +131,46 @@ const equipamentos = [
             "Wi-Fi Plus": "✅ (recomendado)",
             "Precisa ONU": "✅ (sim)",
             "Alta Velocidade": "❌ (limitado a 100Mb)"
+        },
+        obs: ""
+    },
+    // --- NOVOS ROTEADORES D-LINK ---
+    {
+        id: "dlink_dir615",
+        categoria: "ROTEADOR",
+        fabricante: "D-Link",
+        logo: "imagens/logos/d-link.png",
+        modelo: "DIR615",
+        imagem: "imagens/equipamentos/dlink_dir615.gif",
+        specs: {
+            "LAN": "(4 portas) (fast - 10/100)",
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "❌ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "❌ (porta PON)",
+            "Wi-Fi Plus": "✅ (recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "❌ (limitado a 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "dlink_dir825",
+        categoria: "ROTEADOR",
+        fabricante: "D-Link",
+        logo: "imagens/logos/d-link.png",
+        modelo: "DIR825",
+        imagem: "imagens/equipamentos/dlink_dir825.gif",
+        specs: {
+            // CORRIGIDO PARA GIGA
+            "LAN": "(4 portas) (giga - 100/1000)", 
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "❌ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
         },
         obs: ""
     },
