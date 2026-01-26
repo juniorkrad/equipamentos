@@ -81,7 +81,7 @@ const equipamentos = [
         categoria: "ONU", 
         fabricante: "Furukawa",
         logo: "imagens/logos/furukawa.png",
-        modelo: "630",
+        modelo: "GPON 630-10B",
         imagem: "imagens/equipamentos/furukawa_630.gif", 
         specs: {
             "LAN": "(1 porta) (giga - 100/1000)",
@@ -107,6 +107,83 @@ const equipamentos = [
             "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
             "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
             "Telefonia": "✅ (não possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    // --- NOVOS EQUIPAMENTOS PARKS ---
+    {
+        id: "parks_fiberlink_101",
+        categoria: "ONU", 
+        fabricante: "Parks",
+        logo: "imagens/logos/parks.png",
+        modelo: "FIBERLINK 101",
+        imagem: "imagens/equipamentos/parks_101.gif", 
+        specs: {
+            "LAN": "(1 porta) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "❌ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "❌ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "✅ (sim)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "parks_fiberlink_410",
+        categoria: "ONT", 
+        fabricante: "Parks",
+        logo: "imagens/logos/parks.png",
+        modelo: "FIBERLINK 410 AC1200",
+        imagem: "imagens/equipamentos/parks_410.gif", 
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "✅ (possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "parks_fiberlink_411",
+        categoria: "ONT", 
+        fabricante: "Parks",
+        logo: "imagens/logos/parks.png",
+        modelo: "FIBERLINK 411",
+        imagem: "imagens/equipamentos/parks_411.gif", 
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "✅ (possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "parks_fiberlink_501",
+        categoria: "ONT", 
+        fabricante: "Parks",
+        logo: "imagens/logos/parks.png",
+        modelo: "FIBERLINK 501",
+        imagem: "imagens/equipamentos/parks_501.gif", 
+        specs: {
+            "LAN": "(2 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "✅ (possui)",
             "Fibra": "✅ (porta PON)",
             "Wi-Fi Plus": "❌ (não recomendado)",
             "Precisa Roteador": "❌ (não)",
