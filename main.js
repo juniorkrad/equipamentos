@@ -1,5 +1,6 @@
 // --- BANCO DE DADOS DOS EQUIPAMENTOS ---
 const equipamentos = [
+    // --- ROTEADORES EXISTENTES ---
     {
         id: "dlink_dir610",
         categoria: "ROTEADOR", 
@@ -38,6 +39,103 @@ const equipamentos = [
         },
         obs: ""
     },
+    // --- NOVOS ROTEADORES CADASTRADOS ---
+    {
+        id: "tplink_archer_c5",
+        categoria: "ROTEADOR",
+        fabricante: "TP-Link",
+        logo: "imagens/logos/tplink.png",
+        modelo: "ARCHER C5",
+        imagem: "imagens/equipamentos/tplink_archer-c5.gif",
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "❌ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "greatek_ac1200",
+        categoria: "ROTEADOR",
+        fabricante: "Greatek",
+        logo: "imagens/logos/greatek.png",
+        modelo: "AC1200",
+        imagem: "imagens/equipamentos/greatek_ac1200.gif",
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "❌ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "mercusys_ac1200",
+        categoria: "ROTEADOR",
+        fabricante: "Mercusys",
+        logo: "imagens/logos/mercusys.png",
+        modelo: "AC1200",
+        imagem: "imagens/equipamentos/mercusys_ac1200.gif",
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "❌ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "mercusys_mw301r",
+        categoria: "ROTEADOR",
+        fabricante: "Mercusys",
+        logo: "imagens/logos/mercusys.png",
+        modelo: "MW301R",
+        imagem: "imagens/equipamentos/mercusys_mw301r.gif",
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "❌ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "trendnet_tew731br",
+        categoria: "ROTEADOR",
+        fabricante: "Trendnet",
+        logo: "imagens/logos/tendnet.png",
+        modelo: "TEW-731BR",
+        imagem: "imagens/equipamentos/trendnet_tew-731br.gif",
+        specs: {
+            "LAN": "(4 portas) (fast - 10/100)",
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "❌ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "❌ (porta PON)",
+            "Wi-Fi Plus": "✅ (recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "❌ (limitado a 100Mb)"
+        },
+        obs: ""
+    },
+    // --- ONUs FURUKAWA ---
     {
         id: "furukawa_420_10r",
         categoria: "ONU", 
@@ -114,6 +212,7 @@ const equipamentos = [
         },
         obs: ""
     },
+    // --- PARKS ---
     {
         id: "parks_fiberlink_101",
         categoria: "ONU", 
@@ -190,7 +289,7 @@ const equipamentos = [
         },
         obs: ""
     },
-    // --- NOVOS EQUIPAMENTOS NOKIA ---
+    // --- NOKIA ---
     {
         id: "nokia_140w",
         categoria: "ONT", 
@@ -305,6 +404,14 @@ document.addEventListener('layoutCarregado', () => {
 
         return prefixoPortas + texto;
     }
+
+    // --- NOVA LÓGICA DE ORDENAÇÃO ---
+    // Ordena o array de equipamentos alfabeticamente por Fabricante, depois Modelo
+    equipamentos.sort((a, b) => {
+        const nomeA = `${a.fabricante} ${a.modelo}`.toLowerCase();
+        const nomeB = `${b.fabricante} ${b.modelo}`.toLowerCase();
+        return nomeA.localeCompare(nomeB);
+    });
 
     // 3. Popular o Menu Suspenso
     equipamentos.forEach(eq => {
