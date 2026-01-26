@@ -58,6 +58,44 @@ const equipamentos = [
         obs: ""
     },
     {
+        id: "furukawa_100",
+        categoria: "ONU", 
+        fabricante: "Furukawa",
+        logo: "imagens/logos/furukawa.png",
+        modelo: "100",
+        imagem: "imagens/equipamentos/furukawa_100.gif", 
+        specs: {
+            "LAN": "(1 porta) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "❌ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "❌ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "✅ (sim)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "furukawa_630",
+        categoria: "ONU", 
+        fabricante: "Furukawa",
+        logo: "imagens/logos/furukawa.png",
+        modelo: "630",
+        imagem: "imagens/equipamentos/furukawa_630.gif", 
+        specs: {
+            "LAN": "(1 porta) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "❌ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "❌ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "✅ (sim)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
         id: "furukawa_423_41w",
         categoria: "ONT", 
         fabricante: "Furukawa",
