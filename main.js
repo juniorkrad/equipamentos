@@ -114,7 +114,6 @@ const equipamentos = [
         },
         obs: ""
     },
-    // --- NOVOS EQUIPAMENTOS PARKS ---
     {
         id: "parks_fiberlink_101",
         categoria: "ONU", 
@@ -181,6 +180,64 @@ const equipamentos = [
         imagem: "imagens/equipamentos/parks_501.gif", 
         specs: {
             "LAN": "(2 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "✅ (possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    // --- NOVOS EQUIPAMENTOS NOKIA ---
+    {
+        id: "nokia_140w",
+        categoria: "ONT", 
+        fabricante: "Nokia",
+        logo: "imagens/logos/nokia.png",
+        modelo: "140W",
+        imagem: "imagens/equipamentos/nokia_140w.gif", 
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "✅ (possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "nokia_1425ga",
+        categoria: "ONT", 
+        fabricante: "Nokia",
+        logo: "imagens/logos/nokia.png",
+        modelo: "1425GA",
+        imagem: "imagens/equipamentos/nokia_1425ga.gif", 
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "✅ (possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "nokia_g2425ga",
+        categoria: "ONT", 
+        fabricante: "Nokia",
+        logo: "imagens/logos/nokia.png",
+        modelo: "G-2425G-A",
+        imagem: "imagens/equipamentos/nokia_g-2425g-a.gif", 
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)",
             "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
             "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
             "Telefonia": "✅ (possui)",
