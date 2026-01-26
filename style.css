@@ -61,13 +61,6 @@ header {
     line-height: 1.1;
 }
 
-/* Esconder o título em telas muito pequenas (celulares) */
-@media (max-width: 600px) {
-    .header-title {
-        display: none;
-    }
-}
-
 /* Select Estilizado (Material Design) */
 .md-select {
     padding: 10px 16px;
@@ -267,13 +260,82 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsividade */
+/* -------------------------------------------
+   RESPONSIVIDADE (MOBILE E TABLET)
+------------------------------------------- */
 @media (max-width: 768px) {
-    .equipment-card {
-        grid-template-columns: 1fr;
+    
+    /* 1. Ajuste do Cabeçalho Principal */
+    header {
+        flex-direction: column; /* Empilha logo e select */
+        gap: 1.5rem; /* Espaço entre eles */
+        padding: 1.5rem 1rem;
     }
+
+    .header-title {
+        display: none; /* Título some em telas pequenas */
+    }
+
+    .logo-banner {
+        height: 80px; /* Reduz um pouco a logo do sistema */
+    }
+
+    .md-select {
+        width: 100%; /* Select ocupa toda largura */
+        max-width: 400px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    /* 2. Ajuste do Card */
+    #conteudo-principal {
+        padding: 1rem;
+        align-items: flex-start; /* Alinha ao topo em vez de centro vertical */
+    }
+
+    .equipment-card {
+        grid-template-columns: 1fr; /* Coluna única */
+        margin-bottom: 2rem;
+    }
+
     .card-image-area {
-        height: 250px;
+        height: 220px; /* Altura fixa para imagem */
+        padding: 1.5rem;
         border-right: none;
+        background-color: white; /* Fundo branco pra destacar a imagem no mobile */
+    }
+
+    .card-image-area img {
+        max-height: 100%;
+    }
+
+    .card-details-area {
+        padding: 1.5rem; /* Menos padding lateral */
+    }
+
+    /* Ajuste do Cabeçalho do Card (Logo Equip. + Badge) */
+    .card-header {
+        align-items: center; /* Centraliza verticalmente */
+        margin-bottom: 0.5rem;
+    }
+
+    .brand-logo {
+        height: 50px; /* Logo menor */
+        max-width: 140px;
+    }
+
+    .category-badge {
+        font-size: 0.75rem; /* Badge menor */
+        padding: 4px 10px;
+        letter-spacing: 1px;
+    }
+
+    .card-details-area h1 {
+        font-size: 1.6rem; /* Título do modelo menor */
+    }
+
+    .specs-table td {
+        font-size: 0.9rem; /* Texto da tabela menor */
+        padding: 6px 0;
     }
 }
