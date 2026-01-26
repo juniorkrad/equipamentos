@@ -1,6 +1,6 @@
 // --- BANCO DE DADOS DOS EQUIPAMENTOS ---
 const equipamentos = [
-    // --- ROTEADORES EXISTENTES ---
+    // --- ROTEADORES ---
     {
         id: "dlink_dir610",
         categoria: "ROTEADOR", 
@@ -169,6 +169,44 @@ const equipamentos = [
             "Wi-Fi Plus": "✅ (recomendado)",
             "Precisa ONU": "✅ (sim)",
             "Alta Velocidade": "❌ (limitado a 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "huawei_ax2",
+        categoria: "ROTEADOR", 
+        fabricante: "Huawei",
+        logo: "imagens/logos/huawei.png",
+        modelo: "WIFI 6 AX2",
+        imagem: "imagens/equipamentos/huawei_wifi-6-ax2.gif", 
+        specs: {
+            "LAN": "(3 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "❌ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "huawei_ws5200",
+        categoria: "ROTEADOR", 
+        fabricante: "Huawei",
+        logo: "imagens/logos/huawei.png",
+        modelo: "WIFI WS5200",
+        imagem: "imagens/equipamentos/huawei_wifi-ws5200.gif", 
+        specs: {
+            "LAN": "(3 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "❌ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
         },
         obs: ""
     },
@@ -461,45 +499,7 @@ const equipamentos = [
         },
         obs: ""
     },
-    // --- HUAWEI (NOVOS) ---
-    {
-        id: "huawei_ax2",
-        categoria: "ROTEADOR", 
-        fabricante: "Huawei",
-        logo: "imagens/logos/huawei.png",
-        modelo: "WIFI 6 AX2",
-        imagem: "imagens/equipamentos/huawei_wifi-6-ax2.gif", 
-        specs: {
-            "LAN": "(3 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
-        },
-        obs: ""
-    },
-    {
-        id: "huawei_ws5200",
-        categoria: "ROTEADOR", 
-        fabricante: "Huawei",
-        logo: "imagens/logos/huawei.png",
-        modelo: "WIFI WS5200",
-        imagem: "imagens/equipamentos/huawei_wifi-ws5200.gif", 
-        specs: {
-            "LAN": "(3 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
-        },
-        obs: ""
-    },
+    // --- HUAWEI ---
     {
         id: "huawei_eg8145v5",
         categoria: "ONT", 
@@ -509,6 +509,45 @@ const equipamentos = [
         imagem: "imagens/equipamentos/huawei_eg8145v5.gif", 
         specs: {
             "LAN": "(4 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "✅ (possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    // --- NOVOS EQUIPAMENTOS MAXPRINT ---
+    {
+        id: "maxprint_maxfiber_1200gm",
+        categoria: "ONT", 
+        fabricante: "Maxprint",
+        logo: "imagens/logos/maxprint.png",
+        modelo: "MAXFIBER 1200GM",
+        imagem: "imagens/equipamentos/maxfiber_1200gm.gif", 
+        specs: {
+            "LAN": "(2 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "maxprint_maxfiber_1200gm_fxs",
+        categoria: "ONT", 
+        fabricante: "Maxprint",
+        logo: "imagens/logos/maxprint.png",
+        modelo: "MAXFIBER 1200GM FXS",
+        imagem: "imagens/equipamentos/maxfiber_1200gm-fxs.gif", 
+        specs: {
+            "LAN": "(2 portas) (giga - 100/1000)",
             "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
             "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
             "Telefonia": "✅ (possui)",
