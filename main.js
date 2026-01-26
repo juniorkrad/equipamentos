@@ -1,6 +1,6 @@
 // --- BANCO DE DADOS DOS EQUIPAMENTOS ---
 const equipamentos = [
-    // --- ROTEADORES EXISTENTES ---
+    // --- ROTEADORES ---
     {
         id: "dlink_dir610",
         categoria: "ROTEADOR", 
@@ -19,6 +19,44 @@ const equipamentos = [
             "Alta Velocidade": "❌ (limitado a 100Mb)"
         },
         obs: "Equipamento recomendado para utilização do serviço **Wi-Fi Plus**."
+    },
+    {
+        id: "dlink_dir615",
+        categoria: "ROTEADOR",
+        fabricante: "D-Link",
+        logo: "imagens/logos/d-link.png",
+        modelo: "DIR615",
+        imagem: "imagens/equipamentos/dlink_dir615.gif",
+        specs: {
+            "LAN": "(4 portas) (fast - 10/100)",
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "❌ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "❌ (porta PON)",
+            "Wi-Fi Plus": "✅ (recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "❌ (limitado a 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "dlink_dir825",
+        categoria: "ROTEADOR",
+        fabricante: "D-Link",
+        logo: "imagens/logos/d-link.png",
+        modelo: "DIR825",
+        imagem: "imagens/equipamentos/dlink_dir825.gif",
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)", 
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "❌ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
     },
     {
         id: "tplink_wr840",
@@ -131,46 +169,6 @@ const equipamentos = [
             "Wi-Fi Plus": "✅ (recomendado)",
             "Precisa ONU": "✅ (sim)",
             "Alta Velocidade": "❌ (limitado a 100Mb)"
-        },
-        obs: ""
-    },
-    // --- NOVOS ROTEADORES D-LINK ---
-    {
-        id: "dlink_dir615",
-        categoria: "ROTEADOR",
-        fabricante: "D-Link",
-        logo: "imagens/logos/d-link.png",
-        modelo: "DIR615",
-        imagem: "imagens/equipamentos/dlink_dir615.gif",
-        specs: {
-            "LAN": "(4 portas) (fast - 10/100)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "❌ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "✅ (recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "❌ (limitado a 100Mb)"
-        },
-        obs: ""
-    },
-    {
-        id: "dlink_dir825",
-        categoria: "ROTEADOR",
-        fabricante: "D-Link",
-        logo: "imagens/logos/d-link.png",
-        modelo: "DIR825",
-        imagem: "imagens/equipamentos/dlink_dir825.gif",
-        specs: {
-            // CORRIGIDO PARA GIGA
-            "LAN": "(4 portas) (giga - 100/1000)", 
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
         },
         obs: ""
     },
@@ -379,6 +377,83 @@ const equipamentos = [
             "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
             "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
             "Telefonia": "✅ (possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    // --- V-SOL (NOVOS) ---
+    {
+        id: "vsol_hg323dac",
+        categoria: "ONT", 
+        fabricante: "V-SOL",
+        logo: "imagens/logos/v-sol.png",
+        modelo: "HG323DAC 1200G",
+        imagem: "imagens/equipamentos/vsol_hg323dac-1200g.gif", 
+        specs: {
+            "LAN": "(2 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "✅ (possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "vsol_hg3221d",
+        categoria: "ONT", 
+        fabricante: "V-SOL",
+        logo: "imagens/logos/v-sol.png",
+        modelo: "HG3221D-4G1S AC1200G4 FXS",
+        imagem: "imagens/equipamentos/vsol_hg3221d-4g1s-ac1200g4-fxs.gif", 
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "✅ (possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "vsol_v2802dac",
+        categoria: "ONT", 
+        fabricante: "V-SOL",
+        logo: "imagens/logos/v-sol.png",
+        modelo: "V2802DAC 1200G",
+        imagem: "imagens/equipamentos/vsol_v2802dac-1200g.gif", 
+        specs: {
+            "LAN": "(2 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "vsol_v2804ac",
+        categoria: "ONT", 
+        fabricante: "V-SOL",
+        logo: "imagens/logos/v-sol.png",
+        modelo: "V2804AC-Z AC1200G4",
+        imagem: "imagens/equipamentos/vsol_v2804ac-z-ac1200g4.gif", 
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
             "Fibra": "✅ (porta PON)",
             "Wi-Fi Plus": "❌ (não recomendado)",
             "Precisa Roteador": "❌ (não)",
