@@ -210,6 +210,45 @@ const equipamentos = [
         },
         obs: ""
     },
+    // --- NOVOS ROTEADORES MULTILASER ---
+    {
+        id: "multilaser_re708",
+        categoria: "ROTEADOR", 
+        fabricante: "Multilaser",
+        logo: "imagens/logos/multilaser.png",
+        modelo: "1200MBPS RE708",
+        imagem: "imagens/equipamentos/multilaser_1200mbps.gif", 
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "❌ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "multilaser_re172",
+        categoria: "ROTEADOR", 
+        fabricante: "Multilaser",
+        logo: "imagens/logos/multilaser.png",
+        modelo: "300MBPS RE172",
+        imagem: "imagens/equipamentos/multilaser_300mbps.gif", 
+        specs: {
+            "LAN": "(4 portas) (fast - 10/100)",
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "❌ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "❌ (porta PON)",
+            "Wi-Fi Plus": "✅ (recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "❌ (limitado a 100Mb)"
+        },
+        obs: ""
+    },
     // --- ONUs FURUKAWA ---
     {
         id: "furukawa_420_10r",
@@ -519,7 +558,7 @@ const equipamentos = [
         },
         obs: ""
     },
-    // --- NOVOS EQUIPAMENTOS MAXPRINT ---
+    // --- MAXPRINT ---
     {
         id: "maxprint_maxfiber_1200gm",
         categoria: "ONT", 
