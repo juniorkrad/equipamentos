@@ -19,7 +19,29 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- RODAPÉ ---
     const footer = document.createElement('footer');
     footer.innerHTML = `
-        <p>&copy; 2026 Infraestrutura & Monitoramento | Desenvolvido internamente</p>
+        <div style="opacity: 0.8; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.75rem;">
+            Catálogo de Equipamentos
+        </div>
+        <div>
+            Desenvolvido por 
+            
+            <span style="white-space: nowrap;">
+                <span class="material-symbols-outlined footer-icon">person</span>
+                <strong>@juniorkrad</strong>,
+            </span>
+
+            <span style="white-space: nowrap;">
+                <span class="material-symbols-outlined footer-icon">person</span>
+                <strong>@fabiopsferreira</strong>
+            </span>
+            
+            & 
+            
+            <span style="white-space: nowrap;">
+                <span class="material-symbols-outlined footer-icon">smart_toy</span>
+                <strong>Gemini</strong>
+            </span>
+        </div>
     `;
 
     // Inserir no DOM

@@ -302,9 +302,28 @@ header {
 /* --- FOOTER --- */
 footer {
     text-align: center;
-    padding: 1.5rem;
-    color: rgba(255, 255, 255, 0.7);
+    padding: 2rem 1.5rem;
+    color: rgba(255, 255, 255, 0.6); /* Texto padrão mais suave */
     font-size: 0.85rem;
+    margin-top: auto; /* Mantém o footer no final da página */
+    background-color: transparent; 
+}
+
+/* Destaque para os nomes (@) */
+footer strong {
+    color: #ffffff; /* Branco puro para os nomes */
+    font-weight: 700;
+    margin-right: 4px; /* Espaço após o nome para separar da pontuação */
+}
+
+/* Ícones do Rodapé (Person/Robot) */
+.footer-icon {
+    font-size: 1.1rem !important; /* Tamanho ajustado ao texto */
+    vertical-align: middle;       /* Alinha verticalmente com o texto */
+    margin-right: 2px;            /* Pequeno espaço entre o ícone e o @ */
+    position: relative;
+    top: -2px;                    /* Ajuste fino para centralizar com a fonte */
+    color: rgba(255, 255, 255, 0.8); /* Cor suave para o ícone */
 }
 
 @keyframes slideUpFade {
