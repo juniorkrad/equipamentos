@@ -6,6 +6,11 @@
     --md-sys-color-surface-container: #f3edf7; /* Cor do Card Padrão */
     --md-sys-color-outline-variant: #cac4d0;
     
+    /* Cores de Status */
+    --color-success: #2e7d32; /* Verde */
+    --color-warning: #fbc02d; /* Amarelo/Âmbar */
+    --color-error: #b3261e;   /* Vermelho */
+
     /* Tom de roxo mais perceptível para o fundo dos detalhes */
     --bg-details-area: #f3edf7; 
 
@@ -47,7 +52,7 @@ header {
     object-fit: contain;
 }
 
-/* NOVO ESTILO DO TÍTULO (Atualizado para Maior) */
+/* TÍTULO DO HEADER */
 .header-title {
     font-family: var(--font-family-mono);
     font-size: 2.5rem; 
@@ -89,7 +94,6 @@ header {
     align-items: center;
     padding: 2rem;
     width: 100%;
-    /* ATUALIZADO: Aumentado para 1400px para dar mais largura ao card */
     max-width: 1400px; 
     margin: 0 auto;
     box-sizing: border-box;
@@ -143,7 +147,7 @@ header {
 
 /* Lado Direito: Informações */
 .card-details-area {
-    background-color: var(--bg-details-area); /* Roxo #f3edf7 */
+    background-color: white; /* AGORA É BRANCO PARA DESTACAR A ILHA ROXA */
     padding: 1rem 2rem 2rem 2rem; 
     display: flex;
     flex-direction: column;
@@ -151,13 +155,13 @@ header {
     align-items: flex-start;
 }
 
-/* --- NOVO: HEADER DO CARD (Flexbox para Logo e Badge) --- */
+/* --- HEADER DO CARD (Logo e Badge) --- */
 .card-header {
     display: flex;
-    justify-content: space-between; /* Logo na esquerda, Badge na direita */
-    align-items: flex-start; /* Alinhados no topo */
+    justify-content: space-between; 
+    align-items: flex-start; 
     width: 100%;
-    margin-bottom: 1rem; /* Espaço abaixo do cabeçalho */
+    margin-bottom: 1rem; 
 }
 
 /* Estilo da Logo do Fabricante */
@@ -167,27 +171,27 @@ header {
     max-width: 250px; 
     object-fit: contain;
     object-position: left; 
-    margin: 0; /* A margem agora é controlada pelo .card-header */
+    margin: 0; 
     display: block;
 }
 
 /* --- ETIQUETA DE CATEGORIA --- */
 .category-badge {
-    font-family: var(--font-family-mono); /* Fonte CODE */
+    font-family: var(--font-family-mono); 
     font-size: 0.9rem;
     font-weight: 700;
     color: var(--md-sys-color-primary);
-    background-color: #e8def8; /* Roxo bem claro */
+    background-color: #e8def8; 
     padding: 6px 14px;
     border-radius: 8px; 
     text-transform: uppercase;
     letter-spacing: 1.5px; 
-    margin: 0; /* Sem margem para alinhar com o flexbox */
+    margin: 0; 
     border: 1px solid rgba(103, 80, 164, 0.2); 
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* Título do Modelo (Agora vem DEPOIS do header) */
+/* Título do Modelo */
 .card-details-area h1 {
     margin: 0 0 1.5rem 0; 
     color: var(--md-sys-color-primary);
@@ -196,7 +200,7 @@ header {
     line-height: 1.2;
 }
 
-/* Estilo do texto (Fallback caso não tenha logo) */
+/* Estilo do texto (Fallback) */
 .card-details-area h2 {
     margin: 0 0 1.5rem 0;
     font-size: 1rem;
@@ -206,45 +210,93 @@ header {
     letter-spacing: 1px;
 }
 
-/* Tabela de Especificações */
-.specs-table {
+/* --- NOVO ESTILO DAS TABELAS (REFORMULADO) --- */
+
+.features-table, .details-table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 2rem;
 }
 
-.specs-table td {
+/* Tabela de Características (Parte Superior) */
+.features-table {
+    margin-bottom: 1.5rem;
+}
+
+.features-table td, .details-table td {
     padding: 8px 0;
     border-bottom: 1px solid rgba(0,0,0,0.05);
     font-size: 0.95rem;
+    vertical-align: middle;
+    color: #444;
 }
 
-/* Coluna dos Títulos (Lado Esquerdo da Tabela) */
-.specs-table td:first-child {
-    font-weight: 500;
+/* Coluna dos Ícones/Títulos (Esquerda) */
+.features-table td:first-child,
+.details-table td:first-child {
+    font-weight: 600;
     color: #49454f;
     white-space: nowrap; 
-    padding-right: 20px; 
+    padding-right: 15px; 
     width: 1%; 
 }
 
-.specs-table td:last-child {
-    color: #1d1b20;
+/* Ícones dentro da tabela */
+.features-table .material-symbols-outlined,
+.details-table .material-symbols-outlined {
+    font-size: 1.2rem; /* Ícones um pouco maiores */
 }
 
-/* --- OBSERVAÇÕES --- */
+/* --- NOVO: ETIQUETAS (TAGS) --- */
+.tag {
+    display: inline-block;
+    background-color: #e8def8; /* Fundo Roxo Claro */
+    color: #1d1b20;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-left: 8px;
+    vertical-align: middle;
+    letter-spacing: 0.3px;
+}
+
+/* --- NOVO: BLOCO DE DETALHES (ILHA ROXA) --- */
+.details-box {
+    background-color: var(--md-sys-color-surface-container); /* Roxo Suave */
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(103, 80, 164, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.details-table tr:last-child td {
+    border-bottom: none; /* Remove linha do ultimo item */
+}
+
+/* --- OBSERVAÇÕES (VISUAL ESCURO) --- */
 .obs-box {
     margin-top: auto;
-    background-color: rgba(255, 255, 255, 0.8); 
-    border-left: 6px solid var(--md-sys-color-primary);
-    padding: 1.2rem;
-    border-radius: 0 12px 12px 0;
+    /* Fundo Roxo Escuro */
+    background-color: var(--md-sys-color-primary-container); 
+    color: #ffffff; /* Texto Branco */
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
     font-size: 0.95rem;
-    color: var(--md-sys-color-primary-container);
-    font-weight: 500;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    font-weight: 400;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     width: 100%; 
     box-sizing: border-box;
+    display: flex; /* Alinha ícone e texto */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 12px; /* Espaço entre ícone e texto */
+}
+
+/* Ícone de Destaque dentro da Obs */
+.obs-icon {
+    color: #d0bcff; /* Um lilás bem claro para brilhar no fundo escuro */
+    font-size: 1.5rem;
 }
 
 /* --- FOOTER --- */
@@ -267,21 +319,21 @@ footer {
     
     /* 1. Ajuste do Cabeçalho Principal */
     header {
-        flex-direction: column; /* Empilha logo e select */
-        gap: 1.5rem; /* Espaço entre eles */
+        flex-direction: column; 
+        gap: 1.5rem; 
         padding: 1.5rem 1rem;
     }
 
     .header-title {
-        display: none; /* Título some em telas pequenas */
+        display: none; 
     }
 
     .logo-banner {
-        height: 80px; /* Reduz um pouco a logo do sistema */
+        height: 80px; 
     }
 
     .md-select {
-        width: 100%; /* Select ocupa toda largura */
+        width: 100%; 
         max-width: 400px;
         box-sizing: border-box;
         text-align: center;
@@ -290,7 +342,7 @@ footer {
     /* 2. Ajuste do Card */
     #conteudo-principal {
         padding: 1rem;
-        align-items: flex-start; /* Alinha ao topo em vez de centro vertical */
+        align-items: flex-start; 
     }
 
     .equipment-card {
@@ -299,10 +351,10 @@ footer {
     }
 
     .card-image-area {
-        height: 220px; /* Altura fixa para imagem */
+        height: 220px; 
         padding: 1.5rem;
         border-right: none;
-        background-color: white; /* Fundo branco pra destacar a imagem no mobile */
+        background-color: var(--bg-details-area); /* Mantém fundo roxo suave */
     }
 
     .card-image-area img {
@@ -310,32 +362,32 @@ footer {
     }
 
     .card-details-area {
-        padding: 1.5rem; /* Menos padding lateral */
+        padding: 1.5rem; 
     }
 
-    /* Ajuste do Cabeçalho do Card (Logo Equip. + Badge) */
+    /* Ajuste do Cabeçalho do Card */
     .card-header {
-        align-items: center; /* Centraliza verticalmente */
+        align-items: center; 
         margin-bottom: 0.5rem;
     }
 
     .brand-logo {
-        height: 50px; /* Logo menor */
+        height: 50px; 
         max-width: 140px;
     }
 
     .category-badge {
-        font-size: 0.75rem; /* Badge menor */
+        font-size: 0.75rem; 
         padding: 4px 10px;
         letter-spacing: 1px;
     }
 
     .card-details-area h1 {
-        font-size: 1.6rem; /* Título do modelo menor */
+        font-size: 1.6rem; 
     }
 
-    .specs-table td {
-        font-size: 0.9rem; /* Texto da tabela menor */
+    .features-table td, .details-table td {
+        font-size: 0.9rem; 
         padding: 6px 0;
     }
 }

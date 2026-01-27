@@ -1,347 +1,376 @@
-// --- BANCO DE DADOS DOS EQUIPAMENTOS ---
+// --- BANCO DE DADOS DOS EQUIPAMENTOS (FINAL - CORRIGIDO) ---
 const equipamentos = [
-    // --- ROTEADORES ---
+    // --- ROTEADORES (COM WI-FI PLUS) ---
     {
         id: "dlink_dir610",
         categoria: "ROTEADOR", 
         fabricante: "D-Link",
+        modelo: "DIR610 (Wi-Fi Plus)",
         logo: "imagens/logos/d-link.png",
-        modelo: "DIR610",
         imagem: "imagens/equipamentos/dlink_dir610.gif", 
-        specs: {
-            "LAN": "(4 portas) (fast - 10/100)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "❌ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "PON (Fibra)": "❌ (porta PON)",
-            "Wi-Fi Plus": "✅ (recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "❌ (limitado a 100Mb)"
+        features: {
+            "Alta Velocidade": "❌ Limite de 100Mb",
+            "Porta PON": "❌ Fibra",
+            "Portas LAN": "4 Portas (Fast - 10/100)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "❌ Não Possui",
+            "Telefonia": "❌ Não Possui"
         },
-        obs: "Equipamento recomendado para utilização do serviço **Wi-Fi Plus**."
+        details: {
+            "Precisa ONU": "✅ Sim",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "✅ Sim"
+        },
+        obs: "Recomendado para utilização no serviço Wi-Fi Plus."
     },
     {
         id: "dlink_dir615",
         categoria: "ROTEADOR",
         fabricante: "D-Link",
+        modelo: "DIR615 (Wi-Fi Plus)",
         logo: "imagens/logos/d-link.png",
-        modelo: "DIR615",
         imagem: "imagens/equipamentos/dlink_dir615.gif",
-        specs: {
-            "LAN": "(4 portas) (fast - 10/100)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "❌ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "✅ (recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "❌ (limitado a 100Mb)"
+        features: {
+            "Alta Velocidade": "❌ Limite de 100Mb",
+            "Porta PON": "❌ Fibra",
+            "Portas LAN": "4 Portas (Fast - 10/100)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "❌ Não Possui",
+            "Telefonia": "❌ Não Possui"
         },
-        obs: ""
+        details: {
+            "Precisa ONU": "✅ Sim",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "✅ Sim"
+        },
+        obs: "Recomendado para utilização no serviço Wi-Fi Plus."
     },
     {
-        id: "dlink_dir825",
-        categoria: "ROTEADOR",
-        fabricante: "D-Link",
-        logo: "imagens/logos/d-link.png",
-        modelo: "DIR825",
-        imagem: "imagens/equipamentos/dlink_dir825.gif",
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)", 
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
-        },
-        obs: ""
-    },
-    {
-        id: "tplink_wr840",
+        id: "intelbras_iwr3000n",
         categoria: "ROTEADOR", 
-        fabricante: "TP-Link",
-        logo: "imagens/logos/tp-link.png",
-        modelo: "WR840",
-        imagem: "imagens/equipamentos/tplink_wr840.gif", 
-        specs: {
-            "LAN": "(4 portas) (fast - 10/100)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "❌ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "PON (Fibra)": "❌ (porta PON)",
-            "Wi-Fi Plus": "✅ (recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "❌ (limitado a 100Mb)"
+        fabricante: "Intelbras",
+        modelo: "IWR 3000N (Wi-Fi Plus)",
+        logo: "imagens/logos/intelbras.png",
+        imagem: "imagens/equipamentos/intelbras.gif", 
+        features: {
+            "Alta Velocidade": "❌ Limite de 100Mb",
+            "Porta PON": "❌ Fibra",
+            "Portas LAN": "4 Portas (Fast - 10/100)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "❌ Não Possui",
+            "Telefonia": "❌ Não Possui"
         },
-        obs: ""
-    },
-    {
-        id: "tplink_archer_c5",
-        categoria: "ROTEADOR",
-        fabricante: "TP-Link",
-        logo: "imagens/logos/tp-link.png",
-        modelo: "ARCHER C5",
-        imagem: "imagens/equipamentos/tplink_archer-c5.gif",
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        details: {
+            "Precisa ONU": "✅ Sim",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "✅ Sim"
         },
-        obs: ""
-    },
-    {
-        id: "greatek_ac1200",
-        categoria: "ROTEADOR",
-        fabricante: "Greatek",
-        logo: "imagens/logos/greatek.png",
-        modelo: "AC1200",
-        imagem: "imagens/equipamentos/greatek_ac1200.gif",
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
-        },
-        obs: ""
-    },
-    {
-        id: "mercusys_ac1200",
-        categoria: "ROTEADOR",
-        fabricante: "Mercusys",
-        logo: "imagens/logos/mercusys.png",
-        modelo: "AC1200",
-        imagem: "imagens/equipamentos/mercusys_ac1200.gif",
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
-        },
-        obs: ""
-    },
-    {
-        id: "mercusys_mw301r",
-        categoria: "ROTEADOR",
-        fabricante: "Mercusys",
-        logo: "imagens/logos/mercusys.png",
-        modelo: "MW301R",
-        imagem: "imagens/equipamentos/mercusys_mw301r.gif",
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
-        },
-        obs: ""
-    },
-    {
-        id: "trendnet_tew731br",
-        categoria: "ROTEADOR",
-        fabricante: "Trendnet",
-        logo: "imagens/logos/trendnet.png", 
-        modelo: "TEW-731BR",
-        imagem: "imagens/equipamentos/trendnet_tew-731br.gif",
-        specs: {
-            "LAN": "(4 portas) (fast - 10/100)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "❌ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "✅ (recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "❌ (limitado a 100Mb)"
-        },
-        obs: ""
-    },
-    {
-        id: "huawei_ax2",
-        categoria: "ROTEADOR", 
-        fabricante: "Huawei",
-        logo: "imagens/logos/huawei.png",
-        modelo: "WIFI 6 AX2",
-        imagem: "imagens/equipamentos/huawei_wifi-6-ax2.gif", 
-        specs: {
-            "LAN": "(3 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
-        },
-        obs: ""
-    },
-    {
-        id: "huawei_ws5200",
-        categoria: "ROTEADOR", 
-        fabricante: "Huawei",
-        logo: "imagens/logos/huawei.png",
-        modelo: "WIFI WS5200",
-        imagem: "imagens/equipamentos/huawei_wifi-ws5200.gif", 
-        specs: {
-            "LAN": "(3 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
-        },
-        obs: ""
-    },
-    {
-        id: "multilaser_re708",
-        categoria: "ROTEADOR", 
-        fabricante: "Multilaser",
-        logo: "imagens/logos/multilaser.png",
-        modelo: "1200MBPS RE708",
-        imagem: "imagens/equipamentos/multilaser_1200mbps.gif", 
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
-        },
-        obs: ""
+        obs: "Recomendado para utilização no serviço Wi-Fi Plus."
     },
     {
         id: "multilaser_re172",
         categoria: "ROTEADOR", 
         fabricante: "Multilaser",
+        modelo: "300MBPS RE172 (Wi-Fi Plus)",
         logo: "imagens/logos/multilaser.png",
-        modelo: "300MBPS RE172",
         imagem: "imagens/equipamentos/multilaser_300mbps.gif", 
-        specs: {
-            "LAN": "(4 portas) (fast - 10/100)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "❌ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "✅ (recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "❌ (limitado a 100Mb)"
+        features: {
+            "Alta Velocidade": "❌ Limite de 100Mb",
+            "Porta PON": "❌ Fibra",
+            "Portas LAN": "4 Portas (Fast - 10/100)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "❌ Não Possui",
+            "Telefonia": "❌ Não Possui"
         },
-        obs: ""
-    },
-    // --- NOVOS ROTEADORES E ONTs ---
-    {
-        id: "intelbras_iwr3000n",
-        categoria: "ROTEADOR", 
-        fabricante: "Intelbras",
-        logo: "imagens/logos/intelbras.png",
-        modelo: "IWR 3000N",
-        imagem: "imagens/equipamentos/intelbras.gif", 
-        specs: {
-            "LAN": "(4 portas) (fast - 10/100)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "❌ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "✅ (recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "❌ (limitado a 100Mb)"
+        details: {
+            "Precisa ONU": "✅ Sim",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "✅ Sim"
         },
-        obs: ""
+        obs: "Recomendado para utilização no serviço Wi-Fi Plus."
     },
     {
         id: "smartlan_aprio150",
         categoria: "ROTEADOR", 
         fabricante: "Smartlan",
+        modelo: "APRIO150CLASSIC (Wi-Fi Plus)",
         logo: "imagens/logos/smartlan.jpg",
-        modelo: "APRIO150CLASSIC",
         imagem: "imagens/equipamentos/smartlan.gif", 
-        specs: {
-            "LAN": "(4 portas) (fast - 10/100)",
-            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5GHz": "❌ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "❌ (porta PON)",
-            "Wi-Fi Plus": "✅ (recomendado)",
-            "Precisa ONU": "✅ (sim)",
-            "Alta Velocidade": "❌ (limitado a 100Mb)"
+        features: {
+            "Alta Velocidade": "❌ Limite de 100Mb",
+            "Porta PON": "❌ Fibra",
+            "Portas LAN": "4 Portas (Fast - 10/100)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "❌ Não Possui",
+            "Telefonia": "❌ Não Possui"
         },
-        obs: ""
+        details: {
+            "Precisa ONU": "✅ Sim",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "✅ Sim"
+        },
+        obs: "Recomendado para utilização no serviço Wi-Fi Plus."
     },
     {
-        id: "tenda_xpon_gh9",
-        categoria: "ONT", 
-        fabricante: "Tenda",
-        logo: "imagens/logos/tenda.png",
-        modelo: "XPON GH9",
-        imagem: "imagens/equipamentos/tenda_hg9.gif", 
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        id: "tplink_wr840",
+        categoria: "ROTEADOR", 
+        fabricante: "TP-Link",
+        modelo: "WR840 (Wi-Fi Plus)",
+        logo: "imagens/logos/tp-link.png",
+        imagem: "imagens/equipamentos/tplink_wr840.gif", 
+        features: {
+            "Alta Velocidade": "❌ Limite de 100Mb",
+            "Porta PON": "❌ Fibra",
+            "Portas LAN": "4 Portas (Fast - 10/100)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "❌ Não Possui",
+            "Telefonia": "❌ Não Possui"
         },
-        obs: ""
+        details: {
+            "Precisa ONU": "✅ Sim",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "✅ Sim"
+        },
+        obs: "Recomendado para utilização no serviço Wi-Fi Plus."
     },
     {
-        id: "shoreline_fxs_sh1505wf",
-        categoria: "ONT", 
-        fabricante: "Shoreline",
-        logo: "imagens/logos/shoreline.png",
-        modelo: "FXS SH1505WF",
-        imagem: "imagens/equipamentos/shoreline_xpon-ac1200-sh-1040wf.gif", 
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (limitado a 100Mb)"
+        id: "trendnet_tew731br",
+        categoria: "ROTEADOR",
+        fabricante: "Trendnet",
+        modelo: "TEW-731BR (Wi-Fi Plus)",
+        logo: "imagens/logos/trendnet.png", 
+        imagem: "imagens/equipamentos/trendnet_tew-731br.gif",
+        features: {
+            "Alta Velocidade": "❌ Limite de 100Mb",
+            "Porta PON": "❌ Fibra",
+            "Portas LAN": "4 Portas (Fast - 10/100)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "❌ Não Possui",
+            "Telefonia": "❌ Não Possui"
         },
-        obs: ""
+        details: {
+            "Precisa ONU": "✅ Sim",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "✅ Sim"
+        },
+        obs: "Recomendado para utilização no serviço Wi-Fi Plus."
     },
-    // --- ONUs FURUKAWA ---
+    // --- MERCUSYS MW301R (WI-FI PLUS) ---
+    {
+        id: "mercusys_mw301r",
+        categoria: "ROTEADOR",
+        fabricante: "Mercusys",
+        modelo: "MW301R (Wi-Fi Plus)",
+        logo: "imagens/logos/mercusys.png",
+        imagem: "imagens/equipamentos/mercusys_mw301r.gif",
+        features: {
+            "Alta Velocidade": "❌ Limite de 100Mb",
+            "Porta PON": "❌ Fibra",
+            "Portas LAN": "2 Portas (Fast - 10/100)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "❌ Não Possui",
+            "Telefonia": "❌ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "✅ Sim",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "✅ Sim"
+        },
+        obs: "Recomendado para utilização no serviço Wi-Fi Plus."
+    },
+
+    // --- ROTEADORES AC (PRINCIPAIS) ---
+    {
+        id: "dlink_dir825",
+        categoria: "ROTEADOR",
+        fabricante: "D-Link",
+        modelo: "DIR825",
+        logo: "imagens/logos/d-link.png",
+        imagem: "imagens/equipamentos/dlink_dir825.gif",
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "❌ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)", 
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "❌ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "✅ Sim",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: "Utilizar como equipamento principal da rede ao lado de uma ONU."
+    },
+    {
+        id: "greatek_ac1200",
+        categoria: "ROTEADOR",
+        fabricante: "Greatek",
+        modelo: "AC1200",
+        logo: "imagens/logos/greatek.png",
+        imagem: "imagens/equipamentos/greatek_ac1200.gif",
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "❌ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "❌ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "✅ Sim",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: "Utilizar como equipamento principal da rede ao lado de uma ONU."
+    },
+    {
+        id: "huawei_ax2",
+        categoria: "ROTEADOR", 
+        fabricante: "Huawei",
+        modelo: "WIFI 6 AX2",
+        logo: "imagens/logos/huawei.png",
+        imagem: "imagens/equipamentos/huawei_wifi-6-ax2.gif", 
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "❌ Fibra",
+            "Portas LAN": "2 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "❌ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "✅ Sim",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: "Utilizar como equipamento principal da rede ao lado de uma ONU."
+    },
+    {
+        id: "huawei_ws5200",
+        categoria: "ROTEADOR", 
+        fabricante: "Huawei",
+        modelo: "WIFI WS5200",
+        logo: "imagens/logos/huawei.png",
+        imagem: "imagens/equipamentos/huawei_wifi-ws5200.gif", 
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "❌ Fibra",
+            "Portas LAN": "3 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "❌ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "✅ Sim",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: "Utilizar como equipamento principal da rede ao lado de uma ONU."
+    },
+    {
+        id: "mercusys_ac1200",
+        categoria: "ROTEADOR",
+        fabricante: "Mercusys",
+        modelo: "AC1200",
+        logo: "imagens/logos/mercusys.png",
+        imagem: "imagens/equipamentos/mercusys_ac1200.gif",
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "❌ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "❌ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "✅ Sim",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: "Utilizar como equipamento principal da rede ao lado de uma ONU."
+    },
+    {
+        id: "multilaser_re708",
+        categoria: "ROTEADOR", 
+        fabricante: "Multilaser",
+        modelo: "1200MBPS RE708",
+        logo: "imagens/logos/multilaser.png",
+        imagem: "imagens/equipamentos/multilaser_1200mbps.gif", 
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "❌ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "❌ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "✅ Sim",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: "Utilizar como equipamento principal da rede ao lado de uma ONU."
+    },
+    {
+        id: "tplink_archer_c5",
+        categoria: "ROTEADOR",
+        fabricante: "TP-Link",
+        modelo: "ARCHER C5",
+        logo: "imagens/logos/tp-link.png",
+        imagem: "imagens/equipamentos/tplink_archer-c5.gif",
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "❌ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "❌ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "✅ Sim",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: "Utilizar como equipamento principal da rede ao lado de uma ONU."
+    },
+
+    // --- ONUs (BRIDGE) ---
     {
         id: "furukawa_420_10r",
         categoria: "ONU", 
         fabricante: "Furukawa",
-        logo: "imagens/logos/furukawa.png",
         modelo: "420-10R",
+        logo: "imagens/logos/furukawa.png",
         imagem: "imagens/equipamentos/furukawa_420.gif", 
-        specs: {
-            "LAN": "(1 porta) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "❌ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "❌ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "✅ (sim)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "1 Porta (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "❌ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "❌ Alta Velocidade (baixo alcance)",
+            "Telefonia": "❌ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "✅ Sim",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
@@ -349,18 +378,22 @@ const equipamentos = [
         id: "furukawa_100",
         categoria: "ONU", 
         fabricante: "Furukawa",
-        logo: "imagens/logos/furukawa.png",
         modelo: "100",
+        logo: "imagens/logos/furukawa.png",
         imagem: "imagens/equipamentos/furukawa_100.gif", 
-        specs: {
-            "LAN": "(1 porta) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "❌ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "❌ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "✅ (sim)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "1 Porta (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "❌ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "❌ Alta Velocidade (baixo alcance)",
+            "Telefonia": "❌ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "✅ Sim",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
@@ -368,57 +401,70 @@ const equipamentos = [
         id: "furukawa_630",
         categoria: "ONU", 
         fabricante: "Furukawa",
-        logo: "imagens/logos/furukawa.png",
         modelo: "GPON 630-10B",
-        imagem: "imagens/equipamentos/furukawa_630.gif", 
-        specs: {
-            "LAN": "(1 porta) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "❌ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "❌ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "✅ (sim)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
-        },
-        obs: ""
-    },
-    {
-        id: "furukawa_423_41w",
-        categoria: "ONT", 
-        fabricante: "Furukawa",
         logo: "imagens/logos/furukawa.png",
-        modelo: "423-41W/AC",
-        imagem: "imagens/equipamentos/furukawa_423.gif", 
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (não possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        imagem: "imagens/equipamentos/furukawa_630.gif", 
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "1 Porta (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "❌ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "❌ Alta Velocidade (baixo alcance)",
+            "Telefonia": "❌ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "✅ Sim",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
-    // --- PARKS ---
     {
         id: "parks_fiberlink_101",
         categoria: "ONU", 
         fabricante: "Parks",
-        logo: "imagens/logos/parks.png",
         modelo: "FIBERLINK 101",
+        logo: "imagens/logos/parks.png",
         imagem: "imagens/equipamentos/parks_101.gif", 
-        specs: {
-            "LAN": "(1 porta) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "❌ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "❌ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "✅ (sim)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "1 Porta (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "❌ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "❌ Alta Velocidade (baixo alcance)",
+            "Telefonia": "❌ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "✅ Sim",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: ""
+    },
+
+    // --- ONTs (GATEWAY) ---
+    {
+        id: "furukawa_423_41w",
+        categoria: "ONT", 
+        fabricante: "Furukawa",
+        modelo: "423-41W/AC",
+        logo: "imagens/logos/furukawa.png",
+        imagem: "imagens/equipamentos/furukawa_423.gif", 
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
@@ -426,18 +472,22 @@ const equipamentos = [
         id: "parks_fiberlink_410",
         categoria: "ONT", 
         fabricante: "Parks",
-        logo: "imagens/logos/parks.png",
         modelo: "FIBERLINK 410 AC1200",
+        logo: "imagens/logos/parks.png",
         imagem: "imagens/equipamentos/parks_410.gif", 
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
@@ -445,18 +495,22 @@ const equipamentos = [
         id: "parks_fiberlink_411",
         categoria: "ONT", 
         fabricante: "Parks",
-        logo: "imagens/logos/parks.png",
         modelo: "FIBERLINK 411",
+        logo: "imagens/logos/parks.png",
         imagem: "imagens/equipamentos/parks_411.gif", 
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
@@ -464,38 +518,45 @@ const equipamentos = [
         id: "parks_fiberlink_501",
         categoria: "ONT", 
         fabricante: "Parks",
-        logo: "imagens/logos/parks.png",
         modelo: "FIBERLINK 501",
+        logo: "imagens/logos/parks.png",
         imagem: "imagens/equipamentos/parks_501.gif", 
-        specs: {
-            "LAN": "(2 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "2 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
-    // --- NOKIA ---
     {
         id: "nokia_140w",
         categoria: "ONT", 
         fabricante: "Nokia",
-        logo: "imagens/logos/nokia.png",
         modelo: "140W",
+        logo: "imagens/logos/nokia.png",
         imagem: "imagens/equipamentos/nokia_140w.gif", 
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
@@ -503,18 +564,22 @@ const equipamentos = [
         id: "nokia_1425ga",
         categoria: "ONT", 
         fabricante: "Nokia",
-        logo: "imagens/logos/nokia.png",
         modelo: "1425GA",
+        logo: "imagens/logos/nokia.png",
         imagem: "imagens/equipamentos/nokia_1425ga.gif", 
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
@@ -522,38 +587,45 @@ const equipamentos = [
         id: "nokia_g2425ga",
         categoria: "ONT", 
         fabricante: "Nokia",
-        logo: "imagens/logos/nokia.png",
         modelo: "G-2425G-A",
+        logo: "imagens/logos/nokia.png",
         imagem: "imagens/equipamentos/nokia_g-2425g-a.gif", 
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
-    // --- V-SOL ---
     {
         id: "vsol_hg323dac",
         categoria: "ONT", 
         fabricante: "V-SOL",
-        logo: "imagens/logos/v-sol.png",
         modelo: "HG323DAC 1200G",
+        logo: "imagens/logos/v-sol.png",
         imagem: "imagens/equipamentos/vsol_hg323dac-1200g.gif", 
-        specs: {
-            "LAN": "(2 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "2 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
@@ -561,18 +633,22 @@ const equipamentos = [
         id: "vsol_hg3221d",
         categoria: "ONT", 
         fabricante: "V-SOL",
-        logo: "imagens/logos/v-sol.png",
         modelo: "HG3221D-4G1S AC1200G4 FXS",
+        logo: "imagens/logos/v-sol.png",
         imagem: "imagens/equipamentos/vsol_hg3221d-4g1s-ac1200g4-fxs.gif", 
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
@@ -580,18 +656,22 @@ const equipamentos = [
         id: "vsol_v2802dac",
         categoria: "ONT", 
         fabricante: "V-SOL",
-        logo: "imagens/logos/v-sol.png",
         modelo: "V2802DAC 1200G",
+        logo: "imagens/logos/v-sol.png",
         imagem: "imagens/equipamentos/vsol_v2802dac-1200g.gif", 
-        specs: {
-            "LAN": "(2 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "2 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "❌ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
@@ -599,58 +679,68 @@ const equipamentos = [
         id: "vsol_v2804ac",
         categoria: "ONT", 
         fabricante: "V-SOL",
-        logo: "imagens/logos/v-sol.png",
         modelo: "V2804AC-Z AC1200G4",
+        logo: "imagens/logos/v-sol.png",
         imagem: "imagens/equipamentos/vsol_v2804ac-z-ac1200g4.gif", 
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "❌ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
-    // --- HUAWEI ---
     {
         id: "huawei_eg8145v5",
         categoria: "ONT", 
         fabricante: "Huawei",
-        logo: "imagens/logos/huawei.png",
         modelo: "EG8145V5",
+        logo: "imagens/logos/huawei.png",
         imagem: "imagens/equipamentos/huawei_eg8145v5.gif", 
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
-    // --- MAXPRINT ---
     {
         id: "maxprint_maxfiber_1200gm",
         categoria: "ONT", 
         fabricante: "Maxprint",
-        logo: "imagens/logos/maxprint.png",
         modelo: "MAXFIBER 1200GM",
+        logo: "imagens/logos/maxprint.png",
         imagem: "imagens/equipamentos/maxfiber_1200gm.gif", 
-        specs: {
-            "LAN": "(2 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "2 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "❌ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
@@ -658,38 +748,46 @@ const equipamentos = [
         id: "maxprint_maxfiber_1200gm_fxs",
         categoria: "ONT", 
         fabricante: "Maxprint",
-        logo: "imagens/logos/maxprint.png",
         modelo: "MAXFIBER 1200GM FXS",
+        logo: "imagens/logos/maxprint.png",
         imagem: "imagens/equipamentos/maxfiber_1200gm-fxs.gif", 
-        specs: {
-            "LAN": "(2 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "2 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
-    // --- (NNET) ---
+    // --- ATUALIZAÇÃO NNET ---
     {
         id: "askey_8115_nnet",
         categoria: "ONT", 
         fabricante: "Askey",
-        logo: "imagens/logos/askey.png",
         modelo: "8115 (NNET)",
+        logo: "imagens/logos/askey.png",
         imagem: "imagens/equipamentos/askey_8115-nnet.gif", 
-        specs: {
-            "LAN": "(4 portas) (fast - 10/100)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui (não utilizar)"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim (não utilizar)",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
@@ -697,18 +795,22 @@ const equipamentos = [
         id: "china_mobile_nnet",
         categoria: "ONT", 
         fabricante: "China Mobile",
-        logo: "imagens/logos/china-mobile.png",
         modelo: "(NNET)",
+        logo: "imagens/logos/china-mobile.png",
         imagem: "imagens/equipamentos/china-mobile_nnet.gif", 
-        specs: {
-            "LAN": "(4 portas) (fast - 10/100)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui (não utilizar)"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim (não utilizar)",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
@@ -716,18 +818,22 @@ const equipamentos = [
         id: "euronet_etn_g1300w",
         categoria: "ONT", 
         fabricante: "Euronet",
-        logo: "imagens/logos/euronet.png",
         modelo: "ETN-G1300W (NNET)",
+        logo: "imagens/logos/euronet.png",
         imagem: "imagens/equipamentos/euronet_etn-g1300w-nnet.gif", 
-        specs: {
-            "LAN": "(4 portas) (fast - 10/100)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "❌ (não possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "❌ (limitado a 100Mb)"
+        features: {
+            "Alta Velocidade": "❌ Limite de 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Fast - 10/100)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim (não utilizar)",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
@@ -735,146 +841,259 @@ const equipamentos = [
         id: "euronet_etn_g1800w",
         categoria: "ONT", 
         fabricante: "Euronet",
-        logo: "imagens/logos/euronet.png",
         modelo: "ETN-G1800W (NNET)",
+        logo: "imagens/logos/euronet.png",
         imagem: "imagens/equipamentos/euronet_etn-g1800w-nnet.gif", 
-        specs: {
-            "LAN": "(4 portas) (fast - 10/100)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Fast - 10/100)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Não Possui (não utilizar)"
         },
-        obs: ""
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim (não utilizar)",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: "Uma porta Giga, três portas Fast."
     },
     {
         id: "mitrastar_fibron",
         categoria: "ONT", 
         fabricante: "Mitrastar",
-        logo: "imagens/logos/mitrastar.png",
         modelo: "FIBRON (NNET)",
+        logo: "imagens/logos/mitrastar.png",
         imagem: "imagens/equipamentos/mitrastar_fibron_nnet.gif", 
-        specs: {
-            "LAN": "(4 portas) (giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
-            "Telefonia": "✅ (possui)",
-            "Fibra": "✅ (porta PON)",
-            "Wi-Fi Plus": "❌ (não recomendado)",
-            "Precisa Roteador": "❌ (não)",
-            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui (não utilizar)"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim (não utilizar)",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: ""
+    },
+    {
+        id: "tenda_xpon_gh9",
+        categoria: "ONT", 
+        fabricante: "Tenda",
+        modelo: "XPON GH9",
+        logo: "imagens/logos/tenda.png",
+        imagem: "imagens/equipamentos/tenda_hg9.gif", 
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: ""
+    },
+    {
+        id: "shoreline_fxs_sh1505wf",
+        categoria: "ONT", 
+        fabricante: "Shoreline",
+        modelo: "FXS SH1505WF",
+        logo: "imagens/logos/shoreline.jpg",
+        imagem: "imagens/equipamentos/shoreline_xpon-ac1200-sh-1040wf.gif", 
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     }
 ];
 
 
-// --- LÓGICA DO SISTEMA ---
+// --- LÓGICA DO SISTEMA (ATUALIZADA) ---
 document.addEventListener('layoutCarregado', () => {
     const select = document.getElementById('equipamento-select');
     const mainContainer = document.getElementById('conteudo-principal');
 
-    // 1. Mapa de Ícones (Chave -> Material Symbol)
+    // 1. Mapa de Ícones (Atualizado: Wi-Fi 5Ghz agora usa 'wifi')
     function getIconePorChave(chave) {
         const mapa = {
-            "LAN": "lan", 
-            "Wi-Fi 2.4GHz": "wifi",
-            "Wi-Fi 2.4Ghz": "wifi", 
-            "Wi-Fi 5GHz": "wifi", 
+            "Alta Velocidade": "rocket_launch",
+            "Porta PON": "cable",
+            "Portas LAN": "lan",
+            "Wi-Fi 2.4Ghz": "wifi",
             "Wi-Fi 5Ghz": "wifi", 
             "Telefonia": "call",
-            "PON (Fibra)": "cable", 
-            "Fibra": "cable", 
-            "Wi-Fi Plus": "wifi_tethering", 
-            "Precisa ONU": "hub", 
-            "Precisa Roteador": "router", 
-            "Alta Velocidade": "rocket_launch"
+            "Precisa ONU": "hub",
+            "Precisa Roteador": "router",
+            "Aceita Wi-Fi Plus": "add_circle",
+            "Usar como Wi-Fi Plus": "settings_input_antenna"
         };
-        return mapa[chave] || "info";
+        return mapa[chave] || "info"; 
     }
 
-    // 2. Função para formatar os valores (Lógica Inteligente de Portas + Formatação Geral)
-    function formatarValor(texto) {
-        let prefixoPortas = "";
-
-        // --- A. LÓGICA INTELIGENTE DE PORTAS ---
-        if (texto.toLowerCase().includes("porta")) {
+    // 2. Formatação de Valores (Lógica de Ícones Coloridos + Tags)
+    function formatarValor(texto, chave) {
+        // --- A. LÓGICA DE ÍCONES PARA LAN (Quantidade de Portas) ---
+        // Verde se >= 4, Amarelo se < 4. Texto preto (sem classe de cor).
+        if (chave === "Portas LAN") {
             const match = texto.match(/(\d+)\s*([Pp]ortas?)/); 
             if (match) {
                 const qtd = parseInt(match[1], 10);
                 
-                if (qtd >= 4) {
-                    prefixoPortas = `<span class="material-symbols-outlined" style="vertical-align: middle; margin: 0 4px; color: #2e7d32;">check_circle</span>`;
-                } else {
-                    prefixoPortas = `<span class="material-symbols-outlined" style="vertical-align: middle; margin: 0 4px; color: #fbc02d;">error</span>`;
+                // Define apenas a cor do ícone
+                const colorStyle = (qtd >= 4) ? "color: #2e7d32;" : "color: #fbc02d;"; 
+                const iconName = (qtd >= 4) ? "check_circle" : "error"; // check ou alerta
+
+                // Separa o texto entre parenteses para virar TAG
+                const partes = texto.split("(");
+                const textoPrincipal = partes[0].trim(); // ex: "4 Portas"
+                const textoTag = partes[1] ? partes[1].replace(")", "") : ""; // ex: "Fast - 10/100"
+
+                // Monta o HTML: Ícone Colorido + Texto Normal + Tag
+                let html = `<span class="material-symbols-outlined" style="${colorStyle} vertical-align: middle; margin-right: 4px;">${iconName}</span>`;
+                html += `<span>${textoPrincipal}</span>`; // Texto normal
+                
+                if(textoTag) {
+                    html += `<span class="tag">${textoTag}</span>`;
                 }
+                return html;
             }
         }
 
-        // --- B. LÓGICA PADRÃO ---
-        texto = texto.replace("4️⃣🚪", "4 portas");
+        // --- B. LÓGICA DE TAGS GERAIS (Para Wi-Fi e outros) ---
+        if (texto.includes("(")) {
+            const partes = texto.split("(");
+            let principal = partes[0].trim();
+            const tagInfo = partes[1].replace(")", "");
 
+            // Processa ícones no texto principal
+            if (principal.includes("✅")) {
+                principal = principal.replace(/✅/g, `<span class="material-symbols-outlined" style="color: #2e7d32; vertical-align: middle; margin-right: 4px;">check_circle</span>`);
+            }
+            if (principal.includes("❌")) {
+                principal = principal.replace(/❌/g, `<span class="material-symbols-outlined" style="color: #c62828; vertical-align: middle; margin-right: 4px;">cancel</span>`);
+            }
+
+            return `${principal} <span class="tag">${tagInfo}</span>`;
+        }
+
+        // --- C. LÓGICA PADRÃO (Sem Tags) ---
         if (texto.includes("✅")) {
-            texto = texto.replace(/✅/g, `<span class="material-symbols-outlined" style="color: #2e7d32; vertical-align: middle; margin: 0 4px;">check_circle</span>`);
+            texto = texto.replace(/✅/g, `<span class="material-symbols-outlined" style="color: #2e7d32; vertical-align: middle; margin-right: 4px;">check_circle</span>`);
         }
         if (texto.includes("❌")) {
-            texto = texto.replace(/❌/g, `<span class="material-symbols-outlined" style="color: #c62828; vertical-align: middle; margin: 0 4px;">cancel</span>`);
+            texto = texto.replace(/❌/g, `<span class="material-symbols-outlined" style="color: #c62828; vertical-align: middle; margin-right: 4px;">cancel</span>`);
         }
 
-        return prefixoPortas + texto;
+        return texto;
     }
 
-    // --- NOVA LÓGICA DE ORDENAÇÃO ---
-    // Ordena o array de equipamentos alfabeticamente por Fabricante, depois Modelo
+    // Ordenação Alfabética
     equipamentos.sort((a, b) => {
         const nomeA = `${a.fabricante} ${a.modelo}`.toLowerCase();
         const nomeB = `${b.fabricante} ${b.modelo}`.toLowerCase();
         return nomeA.localeCompare(nomeB);
     });
 
-    // 3. Popular o Menu Suspenso
+    // Popular Select
     equipamentos.forEach(eq => {
         const option = document.createElement('option');
         option.value = eq.id;
-        option.textContent = `${eq.fabricante} - ${eq.modelo}`;
+        
+        // --- LIMPEZA DO TÍTULO NO SELECT ---
+        // Remove (NNET) e (Wi-Fi Plus) apenas visualmente no menu
+        let nomeLimpo = eq.modelo
+            .replace("(NNET)", "")
+            .replace("(Wi-Fi Plus)", "")
+            .trim();
+
+        option.textContent = `${eq.fabricante} - ${nomeLimpo}`;
         select.appendChild(option);
     });
 
-    // 4. Função para Renderizar
-    function renderizarEquipamento(id) {
-        const item = equipamentos.find(e => e.id === id);
-        
-        if (!item) return;
-
-        // Gerar linhas da tabela
-        let linhasTabela = '';
-        for (const [chave, valor] of Object.entries(item.specs)) {
+    // Função Auxiliar para Criar Tabelas HTML
+    function criarTabelaHTML(dados, classeTabela) {
+        let linhas = '';
+        for (const [chave, valor] of Object.entries(dados)) {
             const iconeNome = getIconePorChave(chave);
-            const iconeHTML = `<span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 8px; color: var(--md-sys-color-primary);">${iconeNome}</span>`;
-            const valorFormatado = formatarValor(valor);
+            const iconeHTML = `<span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 8px; color: var(--md-sys-color-primary); font-size: 1.2rem;">${iconeNome}</span>`;
+            
+            // Passamos a chave para a formatação saber se é LAN ou não
+            const valorFormatado = formatarValor(valor, chave);
 
-            linhasTabela += `
+            linhas += `
                 <tr>
-                    <td style="font-size: 1.1em; display: flex; align-items: center;">
-                        ${iconeHTML} ${chave}
+                    <td>
+                        <div style="display: flex; align-items: center;">
+                            ${iconeHTML} ${chave}
+                        </div>
                     </td>
                     <td>${valorFormatado}</td>
                 </tr>
             `;
         }
+        return `<table class="${classeTabela}"><tbody>${linhas}</tbody></table>`;
+    }
 
-        // LÓGICA DA LOGO
+    // Renderizar Card
+    function renderizarEquipamento(id) {
+        const item = equipamentos.find(e => e.id === id);
+        if (!item) return;
+
+        // Logo
         const fabricanteHTML = item.logo 
             ? `<img src="${item.logo}" alt="${item.fabricante}" class="brand-logo">`
             : `<h2>${item.fabricante}</h2>`;
 
-        // LÓGICA DO BADGE
-        const categoriaHTML = item.categoria 
+        // Badge de Categoria (Padrão)
+        let categoriaHTML = item.categoria 
             ? `<div class="category-badge">${item.categoria}</div>` 
             : '';
+
+        // --- LÓGICA DE BADGE ESPECIAL (NNET e WI-FI PLUS) ---
+        // Verifica se o modelo tem tags especiais e cria badges extras
+        let modeloExibicao = item.modelo;
+
+        if (modeloExibicao.includes("(NNET)")) {
+            // Remove o texto (NNET) do título
+            modeloExibicao = modeloExibicao.replace("(NNET)", "").trim();
+            // Adiciona a badge especial azul
+            categoriaHTML += `<div class="category-badge" style="background-color: #cceeff; color: #006699; margin-left: 8px;">NNET</div>`;
+        }
+
+        if (modeloExibicao.includes("(Wi-Fi Plus)")) {
+            // Remove o texto (Wi-Fi Plus) do título
+            modeloExibicao = modeloExibicao.replace("(Wi-Fi Plus)", "").trim();
+            // Adiciona a badge especial rosa
+            categoriaHTML += `<div class="category-badge" style="background-color: #ffd8e4; color: #31111d; margin-left: 8px;">WI-FI PLUS</div>`;
+        }
+
+        // Gera as Tabelas
+        const htmlFeatures = criarTabelaHTML(item.features, "features-table");
+        const htmlDetails = criarTabelaHTML(item.details, "details-table");
 
         const html = `
             <div class="equipment-card">
@@ -886,24 +1105,29 @@ document.addEventListener('layoutCarregado', () => {
                     
                     <div class="card-header">
                         ${fabricanteHTML}
-                        ${categoriaHTML}
+                        <div style="display: flex;"> ${categoriaHTML}
+                        </div>
                     </div>
 
-                    <h1>${item.modelo}</h1>
+                    <h1>${modeloExibicao}</h1>
 
-                    <table class="specs-table">
-                        <tbody>
-                            ${linhasTabela}
-                        </tbody>
-                    </table>
+                    ${htmlFeatures}
 
-                    ${item.obs ? `<div class="obs-box"><strong>Observação:</strong> ${item.obs}</div>` : ''}
+                    <div class="details-box">
+                        ${htmlDetails}
+                    </div>
+
+                    ${item.obs ? `
+                        <div class="obs-box">
+                            <span class="material-symbols-outlined obs-icon">info</span>
+                            <span>${item.obs}</span>
+                        </div>` 
+                    : ''}
                 </div>
             </div>
         `;
 
         mainContainer.style.opacity = 0;
-        
         setTimeout(() => {
             mainContainer.innerHTML = html;
             mainContainer.style.opacity = 1;
