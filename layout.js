@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     
+    // Captura o ano atual automaticamente
+    const anoAtual = new Date().getFullYear();
+
     // --- CABEÇALHO ---
     const header = document.createElement('header');
     header.innerHTML = `
@@ -22,7 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <div style="opacity: 0.8; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.75rem;">
             Catálogo de Equipamentos
         </div>
-        <div>
+
+        <div style="margin-bottom: 12px;">
             Desenvolvido por 
             
             <span style="white-space: nowrap;">
@@ -41,6 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <span class="material-symbols-outlined footer-icon">smart_toy</span>
                 <strong>Gemini</strong>
             </span>
+        </div>
+
+        <div style="font-size: 0.65rem; opacity: 0.5; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 8px; width: 80%; margin: 0 auto;">
+            &copy; ${anoAtual} Infraestrutura & Monitoramento. Todos os direitos reservados.<br>
+            Projeto registrado. Proibida a reprodução não autorizada.
         </div>
     `;
 
