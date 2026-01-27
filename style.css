@@ -324,6 +324,7 @@ footer strong {
     position: relative;
     top: -2px;                    /* Ajuste fino para centralizar com a fonte */
     color: rgba(255, 255, 255, 0.8); /* Cor suave para o ícone */
+    font-variation-settings: 'FILL' 1; /* ÍCONES PREENCHIDOS (SÓLIDOS) */
 }
 
 @keyframes slideUpFade {
