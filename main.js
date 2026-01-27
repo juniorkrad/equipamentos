@@ -248,6 +248,83 @@ const equipamentos = [
         },
         obs: ""
     },
+    // --- NOVOS ROTEADORES E ONTs ---
+    {
+        id: "intelbras_iwr3000n",
+        categoria: "ROTEADOR", 
+        fabricante: "Intelbras",
+        logo: "imagens/logos/intelbras.png",
+        modelo: "IWR 3000N",
+        imagem: "imagens/equipamentos/intelbras.gif", 
+        specs: {
+            "LAN": "(4 portas) (fast - 10/100)",
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "❌ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "❌ (porta PON)",
+            "Wi-Fi Plus": "✅ (recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "❌ (limitado a 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "smartlan_aprio150",
+        categoria: "ROTEADOR", 
+        fabricante: "Smartlan",
+        logo: "imagens/logos/smartlan.jpg",
+        modelo: "APRIO150CLASSIC",
+        imagem: "imagens/equipamentos/smartlan.gif", 
+        specs: {
+            "LAN": "(4 portas) (fast - 10/100)",
+            "Wi-Fi 2.4GHz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5GHz": "❌ (alta velocidade) (baixo alcance)",
+            "Telefonia": "❌ (não possui)",
+            "Fibra": "❌ (porta PON)",
+            "Wi-Fi Plus": "✅ (recomendado)",
+            "Precisa ONU": "✅ (sim)",
+            "Alta Velocidade": "❌ (limitado a 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "tenda_xpon_gh9",
+        categoria: "ONT", 
+        fabricante: "Tenda",
+        logo: "imagens/logos/tenda.png",
+        modelo: "XPON GH9",
+        imagem: "imagens/equipamentos/tenda_hg9.gif", 
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "✅ (possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (ultrapassa 100Mb)"
+        },
+        obs: ""
+    },
+    {
+        id: "shoreline_fxs_sh1505wf",
+        categoria: "ONT", 
+        fabricante: "Shoreline",
+        logo: "imagens/logos/shoreline.jpg",
+        modelo: "FXS SH1505WF",
+        imagem: "imagens/equipamentos/shoreline_xpon-ac1200-sh-1040wf.gif", 
+        specs: {
+            "LAN": "(4 portas) (giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ (baixa velocidade) (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ (alta velocidade) (baixo alcance)",
+            "Telefonia": "✅ (possui)",
+            "Fibra": "✅ (porta PON)",
+            "Wi-Fi Plus": "❌ (não recomendado)",
+            "Precisa Roteador": "❌ (não)",
+            "Alta Velocidade": "✅ (limitado a 100Mb)"
+        },
+        obs: ""
+    },
     // --- ONUs FURUKAWA ---
     {
         id: "furukawa_420_10r",
@@ -596,7 +673,7 @@ const equipamentos = [
         },
         obs: ""
     },
-    // --- NOVOS EQUIPAMENTOS (NNET) ---
+    // --- (NNET) ---
     {
         id: "askey_8115_nnet",
         categoria: "ONT", 
