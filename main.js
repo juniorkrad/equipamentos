@@ -310,7 +310,7 @@ const equipamentos = [
         id: "shoreline_fxs_sh1505wf",
         categoria: "ONT", 
         fabricante: "Shoreline",
-        logo: "imagens/logos/shoreline.jpg",
+        logo: "imagens/logos/shoreline.png",
         modelo: "FXS SH1505WF",
         imagem: "imagens/equipamentos/shoreline_xpon-ac1200-sh-1040wf.gif", 
         specs: {
