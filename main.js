@@ -96,7 +96,7 @@ const equipamentos = [
     {
         id: "smartlan_aprio150",
         categoria: "ROTEADOR", 
-        fabricante: "Smartlan",
+        fabricante: "Smart Lan",
         modelo: "APRIO150CLASSIC (Wi-Fi Plus)",
         logo: "imagens/logos/smartlan.jpg",
         imagem: "imagens/equipamentos/smartlan.gif", 
