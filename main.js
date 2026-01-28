@@ -1,4 +1,4 @@
-// --- BANCO DE DADOS DOS EQUIPAMENTOS (FINAL - CORREÇÃO SHORELINE E SMART LAN) ---
+// --- BANCO DE DADOS DOS EQUIPAMENTOS (FINAL - CORRIGIDO E SEM DUPLICATAS) ---
 const equipamentos = [
     // --- ROTEADORES (COM WI-FI PLUS) ---
     {
@@ -624,7 +624,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Aceita Wi-Fi Plus": "❌ Não",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -647,7 +647,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Aceita Wi-Fi Plus": "❌ Não",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -670,7 +670,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Aceita Wi-Fi Plus": "❌ Não",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -693,7 +693,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Aceita Wi-Fi Plus": "❌ Não",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -762,7 +762,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Aceita Wi-Fi Plus": "❌ Não",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -785,7 +785,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Aceita Wi-Fi Plus": "❌ Não",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -808,7 +808,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Aceita Wi-Fi Plus": "❌ Não",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -831,7 +831,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Aceita Wi-Fi Plus": "❌ Não",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
