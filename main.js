@@ -1,4 +1,4 @@
-// --- BANCO DE DADOS DOS EQUIPAMENTOS (FINAL - ATUALIZADO ONUs 2) ---
+// --- BANCO DE DADOS DOS EQUIPAMENTOS (FINAL - ONTs ATUALIZADAS) ---
 const equipamentos = [
     // --- ROTEADORES (COM WI-FI PLUS) ---
     {
@@ -96,7 +96,7 @@ const equipamentos = [
     {
         id: "smartlan_aprio150",
         categoria: "ROTEADOR", 
-        fabricante: "SmartLan",
+        fabricante: "Smartlan",
         modelo: "APRIO150CLASSIC (Wi-Fi Plus)",
         logo: "imagens/logos/smartlan.jpg",
         imagem: "imagens/equipamentos/smartlan.gif", 
@@ -401,7 +401,7 @@ const equipamentos = [
         id: "furukawa_630",
         categoria: "ONU", 
         fabricante: "Furukawa",
-        modelo: "630-10B",
+        modelo: "GPON 630-10B",
         logo: "imagens/logos/furukawa.png",
         imagem: "imagens/equipamentos/furukawa_630.gif", 
         features: {
@@ -463,18 +463,18 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
-        obs: ""
+        obs: "Não habilitar DMZ ao realizar configuração do serviço de Wi-Fi Plus. Utilizar Servidor Virtual."
     },
     {
-        id: "parks_fiberlink_410",
+        id: "huawei_eg8145v5",
         categoria: "ONT", 
-        fabricante: "Parks",
-        modelo: "FiberLink 410 AC1200",
-        logo: "imagens/logos/parks.png",
-        imagem: "imagens/equipamentos/parks_410.gif", 
+        fabricante: "Huawei",
+        modelo: "EG8145V5",
+        logo: "imagens/logos/huawei.png",
+        imagem: "imagens/equipamentos/huawei_eg8145v5.gif", 
         features: {
             "Alta Velocidade": "✅ Ultrapassa 100Mb",
             "Porta PON": "✅ Fibra",
@@ -486,41 +486,41 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
-        obs: ""
+        obs: "Precisa fixar IP na placa de rede ao realizar a primeira configuração, 192.168.18.1."
     },
     {
-        id: "parks_fiberlink_411",
+        id: "maxprint_maxfiber_1200gm",
         categoria: "ONT", 
-        fabricante: "Parks",
-        modelo: "FiberLink 411",
-        logo: "imagens/logos/parks.png",
-        imagem: "imagens/equipamentos/parks_411.gif", 
+        fabricante: "Maxprint",
+        modelo: "MAXFIBER 1200GM",
+        logo: "imagens/logos/maxprint.png",
+        imagem: "imagens/equipamentos/maxfiber_1200gm.gif", 
         features: {
             "Alta Velocidade": "✅ Ultrapassa 100Mb",
             "Porta PON": "✅ Fibra",
-            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Portas LAN": "2 Portas (Giga - 100/1000)",
             "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
             "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
-            "Telefonia": "✅ Possui"
+            "Telefonia": "❌ Não Possui"
         },
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
     },
     {
-        id: "parks_fiberlink_501",
+        id: "maxprint_maxfiber_1200gm_fxs",
         categoria: "ONT", 
-        fabricante: "Parks",
-        modelo: "FiberLink 501",
-        logo: "imagens/logos/parks.png",
-        imagem: "imagens/equipamentos/parks_501.gif", 
+        fabricante: "Maxprint",
+        modelo: "MAXFIBER 1200GM FXS",
+        logo: "imagens/logos/maxprint.png",
+        imagem: "imagens/equipamentos/maxfiber_1200gm-fxs.gif", 
         features: {
             "Alta Velocidade": "✅ Ultrapassa 100Mb",
             "Porta PON": "✅ Fibra",
@@ -532,7 +532,30 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: ""
+    },
+    {
+        id: "maxprint_maxfiber_1200g2_fxs",
+        categoria: "ONT", 
+        fabricante: "Maxprint",
+        modelo: "MAXFIBER 1200G2 FXS",
+        logo: "imagens/logos/maxprint.png",
+        imagem: "imagens/equipamentos/maxprint_1200g2-fxs.gif", 
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -555,7 +578,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -578,7 +601,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -607,12 +630,58 @@ const equipamentos = [
         obs: ""
     },
     {
-        id: "vsol_hg323dac",
+        id: "parks_fiberlink_410",
         categoria: "ONT", 
-        fabricante: "V-SOL",
-        modelo: "HG323DAC 1200G",
-        logo: "imagens/logos/v-sol.png",
-        imagem: "imagens/equipamentos/vsol_hg323dac-1200g.gif", 
+        fabricante: "Parks",
+        modelo: "FiberLink 410 AC1200",
+        logo: "imagens/logos/parks.png",
+        imagem: "imagens/equipamentos/parks_410.gif", 
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "❌ Não Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: ""
+    },
+    {
+        id: "parks_fiberlink_411",
+        categoria: "ONT", 
+        fabricante: "Parks",
+        modelo: "FiberLink 411",
+        logo: "imagens/logos/parks.png",
+        imagem: "imagens/equipamentos/parks_411.gif", 
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: ""
+    },
+    {
+        id: "parks_fiberlink_501",
+        categoria: "ONT", 
+        fabricante: "Parks",
+        modelo: "FiberLink 501",
+        logo: "imagens/logos/parks.png",
+        imagem: "imagens/equipamentos/parks_501.gif", 
         features: {
             "Alta Velocidade": "✅ Ultrapassa 100Mb",
             "Porta PON": "✅ Fibra",
@@ -630,6 +699,52 @@ const equipamentos = [
         obs: ""
     },
     {
+        id: "shoreline_fxs_sh1505wf",
+        categoria: "ONT", 
+        fabricante: "Shoreline",
+        modelo: "FXS SH1505WF",
+        logo: "imagens/logos/shoreline.png",
+        imagem: "imagens/equipamentos/shoreline_xpon-ac1200-sh-1040wf.gif", 
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: ""
+    },
+    {
+        id: "tenda_xpon_gh9",
+        categoria: "ONT", 
+        fabricante: "Tenda",
+        modelo: "XPON GH9",
+        logo: "imagens/logos/tenda.png",
+        imagem: "imagens/equipamentos/tenda_hg9.gif", 
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: ""
+    },
+    {
         id: "vsol_hg3221d",
         categoria: "ONT", 
         fabricante: "V-SOL",
@@ -640,6 +755,29 @@ const equipamentos = [
             "Alta Velocidade": "✅ Ultrapassa 100Mb",
             "Porta PON": "✅ Fibra",
             "Portas LAN": "4 Portas (Giga - 100/1000)",
+            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
+            "Telefonia": "✅ Possui"
+        },
+        details: {
+            "Precisa ONU": "❌ Não",
+            "Precisa Roteador": "❌ Não",
+            "Aceita Wi-Fi Plus": "❌ Não",
+            "Usar como Wi-Fi Plus": "❌ Não"
+        },
+        obs: ""
+    },
+    {
+        id: "vsol_hg323dac",
+        categoria: "ONT", 
+        fabricante: "V-SOL",
+        modelo: "HG323DAC 1200G",
+        logo: "imagens/logos/v-sol.png",
+        imagem: "imagens/equipamentos/vsol_hg323dac-1200g.gif", 
+        features: {
+            "Alta Velocidade": "✅ Ultrapassa 100Mb",
+            "Porta PON": "✅ Fibra",
+            "Portas LAN": "2 Portas (Giga - 100/1000)",
             "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
             "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
             "Telefonia": "✅ Possui"
@@ -689,75 +827,6 @@ const equipamentos = [
             "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
             "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
             "Telefonia": "❌ Não Possui"
-        },
-        details: {
-            "Precisa ONU": "❌ Não",
-            "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
-            "Usar como Wi-Fi Plus": "❌ Não"
-        },
-        obs: ""
-    },
-    {
-        id: "huawei_eg8145v5",
-        categoria: "ONT", 
-        fabricante: "Huawei",
-        modelo: "EG8145V5",
-        logo: "imagens/logos/huawei.png",
-        imagem: "imagens/equipamentos/huawei_eg8145v5.gif", 
-        features: {
-            "Alta Velocidade": "✅ Ultrapassa 100Mb",
-            "Porta PON": "✅ Fibra",
-            "Portas LAN": "4 Portas (Giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
-            "Telefonia": "✅ Possui"
-        },
-        details: {
-            "Precisa ONU": "❌ Não",
-            "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
-            "Usar como Wi-Fi Plus": "❌ Não"
-        },
-        obs: ""
-    },
-    {
-        id: "maxprint_maxfiber_1200gm",
-        categoria: "ONT", 
-        fabricante: "Maxprint",
-        modelo: "MAXFIBER 1200GM",
-        logo: "imagens/logos/maxprint.png",
-        imagem: "imagens/equipamentos/maxfiber_1200gm.gif", 
-        features: {
-            "Alta Velocidade": "✅ Ultrapassa 100Mb",
-            "Porta PON": "✅ Fibra",
-            "Portas LAN": "2 Portas (Giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
-            "Telefonia": "❌ Não Possui"
-        },
-        details: {
-            "Precisa ONU": "❌ Não",
-            "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
-            "Usar como Wi-Fi Plus": "❌ Não"
-        },
-        obs: ""
-    },
-    {
-        id: "maxprint_maxfiber_1200gm_fxs",
-        categoria: "ONT", 
-        fabricante: "Maxprint",
-        modelo: "MAXFIBER 1200GM FXS",
-        logo: "imagens/logos/maxprint.png",
-        imagem: "imagens/equipamentos/maxfiber_1200gm-fxs.gif", 
-        features: {
-            "Alta Velocidade": "✅ Ultrapassa 100Mb",
-            "Porta PON": "✅ Fibra",
-            "Portas LAN": "2 Portas (Giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
-            "Telefonia": "✅ Possui"
         },
         details: {
             "Precisa ONU": "❌ Não",
