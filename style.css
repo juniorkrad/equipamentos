@@ -299,7 +299,7 @@ header {
     font-size: 1.5rem;
 }
 
-/* --- FOOTER (ATUALIZADO) --- */
+/* --- FOOTER --- */
 footer {
     text-align: center;
     padding: 2rem 1.5rem;
@@ -382,7 +382,9 @@ footer strong {
     }
 
     .card-details-area {
-        padding: 1.5rem; 
+        padding: 1.5rem;
+        /* IMPORTANTE: Garante que padding não estoure a largura */
+        box-sizing: border-box; 
     }
 
     /* Ajuste do Cabeçalho do Card */
@@ -409,5 +411,14 @@ footer strong {
     .features-table td, .details-table td {
         font-size: 0.9rem; 
         padding: 6px 0;
+    }
+
+    /* CORREÇÃO DE ALINHAMENTO MOBILE */
+    /* Permite quebra de linha nos títulos para não estourar a largura */
+    .features-table td:first-child,
+    .details-table td:first-child {
+        white-space: normal; 
+        width: auto;
+        padding-right: 10px;
     }
 }
