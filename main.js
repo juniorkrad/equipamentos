@@ -1,4 +1,4 @@
-// --- BANCO DE DADOS DOS EQUIPAMENTOS (FINAL - LISTA LIMPA E UNIFICADA) ---
+// --- BANCO DE DADOS DOS EQUIPAMENTOS (FINAL - CORRIGIDO E SEM DUPLICATAS) ---
 const equipamentos = [
     // --- ROTEADORES (COM WI-FI PLUS) ---
     {
@@ -959,29 +959,6 @@ const equipamentos = [
         modelo: "XPON GH9",
         logo: "imagens/logos/tenda.png",
         imagem: "imagens/equipamentos/tenda_hg9.gif", 
-        features: {
-            "Alta Velocidade": "✅ Ultrapassa 100Mb",
-            "Porta PON": "✅ Fibra",
-            "Portas LAN": "4 Portas (Giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
-            "Telefonia": "✅ Possui"
-        },
-        details: {
-            "Precisa ONU": "❌ Não",
-            "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
-            "Usar como Wi-Fi Plus": "❌ Não"
-        },
-        obs: ""
-    },
-    {
-        id: "shoreline_fxs_sh1505wf",
-        categoria: "ONT", 
-        fabricante: "Shoreline",
-        modelo: "FXS SH1505WF",
-        logo: "imagens/logos/shoreline.png",
-        imagem: "imagens/equipamentos/shoreline_xpon-ac1200-sh-1040wf.gif", 
         features: {
             "Alta Velocidade": "✅ Ultrapassa 100Mb",
             "Porta PON": "✅ Fibra",
