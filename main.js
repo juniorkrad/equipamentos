@@ -1,4 +1,4 @@
-// --- BANCO DE DADOS DOS EQUIPAMENTOS (FINAL - ONTs ATUALIZADAS) ---
+// --- BANCO DE DADOS DOS EQUIPAMENTOS (FINAL - LISTA LIMPA E UNIFICADA) ---
 const equipamentos = [
     // --- ROTEADORES (COM WI-FI PLUS) ---
     {
@@ -96,10 +96,10 @@ const equipamentos = [
     {
         id: "smartlan_aprio150",
         categoria: "ROTEADOR", 
-        fabricante: "Smart Lan",
+        fabricante: "Smartlan",
         modelo: "APRIO150CLASSIC (Wi-Fi Plus)",
         logo: "imagens/logos/smartlan.jpg",
-        imagem: "imagens/equipamentos/_smartlan.gif", 
+        imagem: "imagens/equipamentos/smartlan.gif", 
         features: {
             "Alta Velocidade": "❌ Limite de 100Mb",
             "Porta PON": "❌ Fibra",
@@ -642,12 +642,12 @@ const equipamentos = [
             "Portas LAN": "4 Portas (Giga - 100/1000)",
             "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
             "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
-            "Telefonia": "❌ Não Possui"
+            "Telefonia": "✅ Possui"
         },
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Aceita Wi-Fi Plus": "❌ Não",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -670,7 +670,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "✅ Sim",
+            "Aceita Wi-Fi Plus": "❌ Não",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -980,7 +980,7 @@ const equipamentos = [
         categoria: "ONT", 
         fabricante: "Shoreline",
         modelo: "FXS SH1505WF",
-        logo: "imagens/logos/shoreline.jpg",
+        logo: "imagens/logos/shoreline.png",
         imagem: "imagens/equipamentos/shoreline_xpon-ac1200-sh-1040wf.gif", 
         features: {
             "Alta Velocidade": "✅ Ultrapassa 100Mb",
