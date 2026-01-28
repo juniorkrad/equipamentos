@@ -624,7 +624,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -647,7 +647,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -670,7 +670,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -693,7 +693,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -762,7 +762,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -785,7 +785,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -808,7 +808,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -831,7 +831,7 @@ const equipamentos = [
         details: {
             "Precisa ONU": "❌ Não",
             "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
+            "Aceita Wi-Fi Plus": "✅ Sim",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
         obs: ""
@@ -952,29 +952,6 @@ const equipamentos = [
         },
         obs: ""
     },
-    {
-        id: "tenda_xpon_gh9",
-        categoria: "ONT", 
-        fabricante: "Tenda",
-        modelo: "XPON GH9",
-        logo: "imagens/logos/tenda.png",
-        imagem: "imagens/equipamentos/tenda_hg9.gif", 
-        features: {
-            "Alta Velocidade": "✅ Ultrapassa 100Mb",
-            "Porta PON": "✅ Fibra",
-            "Portas LAN": "4 Portas (Giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
-            "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
-            "Telefonia": "✅ Possui"
-        },
-        details: {
-            "Precisa ONU": "❌ Não",
-            "Precisa Roteador": "❌ Não",
-            "Aceita Wi-Fi Plus": "❌ Não",
-            "Usar como Wi-Fi Plus": "❌ Não"
-        },
-        obs: ""
-    }
 ];
 
 
