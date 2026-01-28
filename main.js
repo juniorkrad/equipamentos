@@ -1,4 +1,4 @@
-// --- BANCO DE DADOS DOS EQUIPAMENTOS (FINAL - CORRIGIDO) ---
+// --- BANCO DE DADOS DOS EQUIPAMENTOS (FINAL - ATUALIZADO ONUs 2) ---
 const equipamentos = [
     // --- ROTEADORES (COM WI-FI PLUS) ---
     {
@@ -96,7 +96,7 @@ const equipamentos = [
     {
         id: "smartlan_aprio150",
         categoria: "ROTEADOR", 
-        fabricante: "Smartlan",
+        fabricante: "SmartLan",
         modelo: "APRIO150CLASSIC (Wi-Fi Plus)",
         logo: "imagens/logos/smartlan.jpg",
         imagem: "imagens/equipamentos/smartlan.gif", 
@@ -244,7 +244,7 @@ const equipamentos = [
         features: {
             "Alta Velocidade": "✅ Ultrapassa 100Mb",
             "Porta PON": "❌ Fibra",
-            "Portas LAN": "2 Portas (Giga - 100/1000)",
+            "Portas LAN": "3 Portas (Giga - 100/1000)",
             "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
             "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
             "Telefonia": "❌ Não Possui"
@@ -314,7 +314,7 @@ const equipamentos = [
             "Alta Velocidade": "✅ Ultrapassa 100Mb",
             "Porta PON": "❌ Fibra",
             "Portas LAN": "4 Portas (Giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "✅ Velocidade Limitada (alto alcance)",
+            "Wi-Fi 2.4Ghz": "✅ Limite de Velocidade (alto alcance)",
             "Wi-Fi 5Ghz": "✅ Alta Velocidade (baixo alcance)",
             "Telefonia": "❌ Não Possui"
         },
@@ -362,8 +362,8 @@ const equipamentos = [
             "Alta Velocidade": "✅ Ultrapassa 100Mb",
             "Porta PON": "✅ Fibra",
             "Portas LAN": "1 Porta (Giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "❌ Velocidade Limitada (alto alcance)",
-            "Wi-Fi 5Ghz": "❌ Alta Velocidade (baixo alcance)",
+            "Wi-Fi 2.4Ghz": "❌ Não Possui",
+            "Wi-Fi 5Ghz": "❌ Não Possui",
             "Telefonia": "❌ Não Possui"
         },
         details: {
@@ -372,7 +372,7 @@ const equipamentos = [
             "Aceita Wi-Fi Plus": "❌ Não",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
-        obs: ""
+        obs: "Utilizar como equipamento principal da rede ao lado de um Roteador AC."
     },
     {
         id: "furukawa_100",
@@ -385,8 +385,8 @@ const equipamentos = [
             "Alta Velocidade": "✅ Ultrapassa 100Mb",
             "Porta PON": "✅ Fibra",
             "Portas LAN": "1 Porta (Giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "❌ Velocidade Limitada (alto alcance)",
-            "Wi-Fi 5Ghz": "❌ Alta Velocidade (baixo alcance)",
+            "Wi-Fi 2.4Ghz": "❌ Não Possui",
+            "Wi-Fi 5Ghz": "❌ Não Possui",
             "Telefonia": "❌ Não Possui"
         },
         details: {
@@ -395,21 +395,21 @@ const equipamentos = [
             "Aceita Wi-Fi Plus": "❌ Não",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
-        obs: ""
+        obs: "Utilizar como equipamento principal da rede ao lado de um Roteador AC."
     },
     {
         id: "furukawa_630",
         categoria: "ONU", 
         fabricante: "Furukawa",
-        modelo: "GPON 630-10B",
+        modelo: "630-10B",
         logo: "imagens/logos/furukawa.png",
         imagem: "imagens/equipamentos/furukawa_630.gif", 
         features: {
             "Alta Velocidade": "✅ Ultrapassa 100Mb",
             "Porta PON": "✅ Fibra",
             "Portas LAN": "1 Porta (Giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "❌ Velocidade Limitada (alto alcance)",
-            "Wi-Fi 5Ghz": "❌ Alta Velocidade (baixo alcance)",
+            "Wi-Fi 2.4Ghz": "❌ Não Possui",
+            "Wi-Fi 5Ghz": "❌ Não Possui",
             "Telefonia": "❌ Não Possui"
         },
         details: {
@@ -418,21 +418,21 @@ const equipamentos = [
             "Aceita Wi-Fi Plus": "❌ Não",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
-        obs: ""
+        obs: "Utilizar como equipamento principal da rede ao lado de um Roteador AC. Informações também se aplicam para Furukawa 640."
     },
     {
         id: "parks_fiberlink_101",
         categoria: "ONU", 
         fabricante: "Parks",
-        modelo: "FIBERLINK 101",
+        modelo: "FiberLink 101",
         logo: "imagens/logos/parks.png",
         imagem: "imagens/equipamentos/parks_101.gif", 
         features: {
             "Alta Velocidade": "✅ Ultrapassa 100Mb",
             "Porta PON": "✅ Fibra",
             "Portas LAN": "1 Porta (Giga - 100/1000)",
-            "Wi-Fi 2.4Ghz": "❌ Velocidade Limitada (alto alcance)",
-            "Wi-Fi 5Ghz": "❌ Alta Velocidade (baixo alcance)",
+            "Wi-Fi 2.4Ghz": "❌ Não Possui",
+            "Wi-Fi 5Ghz": "❌ Não Possui",
             "Telefonia": "❌ Não Possui"
         },
         details: {
@@ -441,7 +441,7 @@ const equipamentos = [
             "Aceita Wi-Fi Plus": "❌ Não",
             "Usar como Wi-Fi Plus": "❌ Não"
         },
-        obs: ""
+        obs: "Utilizar como equipamento principal da rede ao lado de um Roteador AC."
     },
 
     // --- ONTs (GATEWAY) ---
@@ -472,7 +472,7 @@ const equipamentos = [
         id: "parks_fiberlink_410",
         categoria: "ONT", 
         fabricante: "Parks",
-        modelo: "FIBERLINK 410 AC1200",
+        modelo: "FiberLink 410 AC1200",
         logo: "imagens/logos/parks.png",
         imagem: "imagens/equipamentos/parks_410.gif", 
         features: {
@@ -495,7 +495,7 @@ const equipamentos = [
         id: "parks_fiberlink_411",
         categoria: "ONT", 
         fabricante: "Parks",
-        modelo: "FIBERLINK 411",
+        modelo: "FiberLink 411",
         logo: "imagens/logos/parks.png",
         imagem: "imagens/equipamentos/parks_411.gif", 
         features: {
@@ -518,7 +518,7 @@ const equipamentos = [
         id: "parks_fiberlink_501",
         categoria: "ONT", 
         fabricante: "Parks",
-        modelo: "FIBERLINK 501",
+        modelo: "FiberLink 501",
         logo: "imagens/logos/parks.png",
         imagem: "imagens/equipamentos/parks_501.gif", 
         features: {
