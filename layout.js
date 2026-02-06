@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
 
         <div style="font-size: 0.65rem; opacity: 0.5; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 8px; width: 80%; margin: 0 auto;">
-            &copy; ${anoAtual} Infraestrutura & Monitoramento. Todos os direitos reservados.<br>
+            &copy; ${anoAtual} Todos os direitos reservados.<br>
             Projeto registrado. Proibida a reprodução não autorizada.
         </div>
     `;
